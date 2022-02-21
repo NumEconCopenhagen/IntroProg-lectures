@@ -114,7 +114,7 @@ class consumer:
     # plot solution
     def plot_solution(self,ax):
         
-        ax.plot(self.x1,self.x2,'ro',color='black') # a black dot
+        ax.plot(self.x1,self.x2,'ro') # a black dot
         ax.text(self.x1*1.03,self.x2*1.03,f'$u^{{max}} = {self.u:.2f}$')
         
     # plot indifference curve
