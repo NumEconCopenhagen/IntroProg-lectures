@@ -1,0 +1,30 @@
+*****************************************
+********** Useful Git Commands **********
+*****************************************
+
+These are commands useful commands for Git
+
+git status
+git log
+git log --graph
+
+git add *                 : stage all changes to be committed next
+git add -u				  : stage all changes, excluding untracked files
+git add <file name>       : stage particular file
+git add -p <file name>	  : go through each hunk for staging [y,n,q,s] (yes,no,quit,split further)
+git rm <file name>        : stage the deletion of the particular file. Use only for tracked files
+git commit -m "<message>" : commit staged changes with a message
+
+git reset <file name>       : unstage a file
+git checkout -- <file name> : discard changes to file since last commit
+git reset --hard HEAD       : discard all changes in all files back to last commit
+
+git remote show           : list known remote repositories
+git pull <repo> <branch>  : fetch and merge last commit from other repository
+
+git diff <file name>                : difference between last commit and current state of a file
+git diff --name-status              : list of modified files since last commit, with letter codes
+git diff --name-status <sha1> HEAD  : list files changed between given commit <sha1> and HEAD
+git diff <sha1> HEAD <file name>    : changes to given file since given commit <sha1>
+
+git log -n 10 --decorate --oneline --graph : view a sourcetree-like graph over 10 latest commits. 
