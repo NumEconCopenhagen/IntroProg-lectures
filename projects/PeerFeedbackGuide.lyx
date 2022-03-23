@@ -165,27 +165,28 @@ Specific guidelines:
 
 \begin_layout Enumerate
 Find the 2 groups for whom you need to provide peer feedback.
- You can look at the file 
-\family typewriter
-Inaugural project - peer assignment.xlsx
-\family default
- in the Files tab of our UCPH_Lectures - Introduction to Programming team
- for the Inaugural project.
+ You can find a spreadsheet with the groups you need to provide feedback
+ to on the Absalon site under the module 
+\begin_inset Quotes eld
+\end_inset
+
+Peer feedback
+\begin_inset Quotes erd
+\end_inset
+
+, there is one separate spreadsheet for the Inaugural project and one for
+ the Data project.
  
-\family typewriter
-Data project - peer assignment.xlsx
-\family default
-.
- will contain the corresponding assignment for the data project.
- These files are produced by 
+\begin_inset Newline newline
+\end_inset
+
+These sheets are produced by 
 \family typewriter
 PeerFeedbackAssignments.ipynb
 \family default
-, which is located in projects folder of Lectures2022.
- Each team who has committed something to the relevant project folder, the
- first column, has a peer_group_1 and peer_group_2 to whom they must give
- feedback.
- The assignment of peers to teams is randomized, and you will get independent
+ which is located in projects folder of Lectures2022.
+ Each team has a peer_group_1 and peer_group_2 to which they must give feedback.
+ The assignment of peers to teams is randomized and you will get independent
  draws for the data project and the model project.
 \end_layout
 
@@ -242,7 +243,7 @@ Try to run their notebooks.
 \end_layout
 
 \begin_layout Enumerate
-Create new issues in their repositories (click on the 
+Create a new issue in their repositories (click the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -250,7 +251,21 @@ Issues
 \begin_inset Quotes erd
 \end_inset
 
- tab), where you provide feedback.
+ tab) where you provide feedback.
+ You can see an example here: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+url{https://github.com/NumEconCopenhagen/example-2022/issues}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -268,7 +283,7 @@ The issues should follow the template below and all comments should be as
 \begin_layout Enumerate
 
 \series bold
-The best part of the project was: 
+The most elegant solution in the project was: 
 \series default
 (explain what and why)
 \end_layout
@@ -276,7 +291,7 @@ The best part of the project was:
 \begin_layout Enumerate
 
 \series bold
-The hardest part of the project to understand was:
+The hardest section of code in the project to understand was:
 \series default
  (explain what)
 \end_layout
@@ -312,11 +327,11 @@ Deadlines:
 \end_layout
 
 \begin_layout Enumerate
-Inaugural project: 27th of March 23:59.
+Inaugural project feedback: 3rd of April 23:59.
 \end_layout
 
 \begin_layout Enumerate
-Data project: 17th of April 23:59.
+Data project feedback: 24th of April 23:59.
 \end_layout
 
 \end_body
