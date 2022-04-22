@@ -270,6 +270,7 @@ Deadline:
  27th of March 23.59
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 
 \series bold
@@ -281,9 +282,9 @@ After handing in, you will be asked to give peer feedback on the projects
 \end_inset
 
 The solution will be made available after the peer feedback round has ended.
- 
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 
 \series bold
@@ -352,7 +353,7 @@ We will here work with a benchmark model of insurance policies, Mossin's
 If the agent is not insured, expected value is 
 \begin_inset Formula 
 \[
-V_{0}=pu(y-x)+(1-p)(y)
+V_{0}=pu(y-x)+(1-p)u(y)
 \]
 
 \end_inset
@@ -429,7 +430,11 @@ y=1,\thinspace\thinspace p=0.2,\thinspace\thinspace\vartheta=-2
 \end_layout
 
 \begin_layout Section*
-Questions:
+Questions 
+\size normal
+(sub-questions in roman numbers)
+\size default
+:
 \end_layout
 
 \begin_layout Enumerate
@@ -438,9 +443,13 @@ status open
 
 \begin_layout Plain Layout
 
-[1)]
+[1.]
 \end_layout
 
+\end_inset
+
+ 
+\begin_inset Formula $i)$
 \end_inset
 
  Construct a function that takes 
@@ -459,11 +468,11 @@ q^{\star}=\textrm{argmax}_{q\in[0,x]}V(q;\pi)
 \begin_inset Newline newline
 \end_inset
 
-Calculate and plot 
-\begin_inset Formula $q^{\star}$
+
+\begin_inset Formula $ii)$
 \end_inset
 
- for 
+ Make a grid of 
 \begin_inset Formula $x$
 \end_inset
 
@@ -472,8 +481,48 @@ Calculate and plot
 \end_inset
 
 .
- What does the graph suggest about the general solution to the agent's problem?
- (You can verify the finding analytically).
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $iii)$
+\end_inset
+
+ For each 
+\begin_inset Formula $x$
+\end_inset
+
+, calculate 
+\begin_inset Formula $q^{\star}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $iv)$
+\end_inset
+
+ Plot the 
+\begin_inset Formula $x$
+\end_inset
+
+s and 
+\begin_inset Formula $q^{\star}$
+\end_inset
+
+s and write what the graph suggests about the general solution to the agent's
+ problem? (You can verify the finding analytically if you will).
 \begin_inset Newline newline
 \end_inset
 
@@ -500,7 +549,7 @@ status open
 
 \begin_layout Plain Layout
 
-[2)]
+[2.]
 \end_layout
 
 \end_inset
@@ -528,11 +577,10 @@ status open
 \begin_inset Newline newline
 \end_inset
 
-To that end, consider now 
-\begin_inset Formula $\pi$
+
+\begin_inset Formula $i)$
 \end_inset
 
- to be a variabel instead of a function.
  Let the loss be 
 \begin_inset Formula $x$
 \end_inset
@@ -542,18 +590,44 @@ To that end, consider now
 \end_inset
 
  over 
-\begin_inset Formula $[0.01,x]$
+\begin_inset Formula $[0.01,0.6]$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $ii)$
+\end_inset
+
+ Think now of 
+\begin_inset Formula $\pi$
+\end_inset
+
+ as a 
+\begin_inset Formula $variabel$
+\end_inset
+
+ that has to be solved for (instead of it being a function of 
+\begin_inset Formula $p$
 \end_inset
 
  and 
-\begin_inset Newline newline
+\begin_inset Formula $q$
 \end_inset
 
-
-\begin_inset Newline newline
+ as before).
+ Loop over each element in the grid of 
+\begin_inset Formula $q$
 \end_inset
 
-Find 
+s and find the corresponding 
 \begin_inset Formula $\tilde{\pi}$
 \end_inset
 
@@ -561,7 +635,7 @@ Find
 \begin_inset Formula $V(q;\tilde{\pi})=V_{0}$
 \end_inset
 
- at each point in the grid.
+.
 \begin_inset Newline newline
 \end_inset
 
@@ -569,32 +643,46 @@ Find
 \begin_inset Newline newline
 \end_inset
 
- Plot 
-\begin_inset Formula $V(q;\tilde{\pi})$
+
+\begin_inset Formula $iii)$
 \end_inset
 
- in a 
+ Make a plot of the acceptable premiums 
 \begin_inset Formula $\tilde{\pi}$
 \end_inset
 
--
+ (the 
 \begin_inset Formula $q$
 \end_inset
 
- space (
-\begin_inset Formula $\tilde{\pi}$
+ grid on the x-axis).
+ Add to the diagram the function 
+\begin_inset Formula $\pi(p,q)=pq$
 \end_inset
 
- on the y-axis, 
+ from before, which gives the premiums that the insurance company need at
+ least in order to break even at each 
 \begin_inset Formula $q$
 \end_inset
 
- on the x-axis).
- Make an illustration of feasible contracts by adding 
-\begin_inset Formula $\pi(p,q)$
+.
+ Taken together, these two graphs map out the set of feasible premiums for
+ a given 
+\begin_inset Formula $q$
 \end_inset
 
- to the diagram.
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Try to make the graph pretty and informative (as if it was going into a
+ text book or paper).
+ That is, use shading, labels, titles etc.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -603,7 +691,7 @@ status open
 
 \begin_layout Plain Layout
 
-[3)]
+[3.]
 \end_layout
 
 \end_inset
@@ -616,7 +704,11 @@ status open
 \begin_inset Formula $q$
 \end_inset
 
- is a fraction of 
+ is a 
+\begin_inset Formula $fraction$
+\end_inset
+
+ of 
 \begin_inset Formula $x$
 \end_inset
 
@@ -624,7 +716,7 @@ status open
  Specifically, we'll set 
 \begin_inset Formula 
 \[
-q=\gamma x
+q=\gamma x,\,\,\,\,\gamma\in[0,1]
 \]
 
 \end_inset
@@ -632,7 +724,7 @@ q=\gamma x
 
 \begin_inset Formula 
 \[
-x\AC\textrm{Beta}(\alpha,\beta),\thinspace\thinspace\alpha=2,\thinspace\thinspace\beta=7
+x\AC\textrm{Beta}(\alpha,\beta),\,\,\thinspace\thinspace\alpha=2,\thinspace\thinspace\beta=7
 \]
 
 \end_inset
@@ -650,6 +742,27 @@ where
 \end_inset
 
  is the density of the Beta distribution.
+ Note that the Beta distribution has support in 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ which explains the limits in the integral.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $i)$
+\end_inset
+
+ Create a function that computes 
+\begin_inset Formula $V(\gamma,\pi)$
+\end_inset
+
+ by Monte Carlo integration using at least 10,000 draws.
  
 \begin_inset Newline newline
 \end_inset
@@ -658,12 +771,11 @@ where
 \begin_inset Newline newline
 \end_inset
 
-First, create a function that computes 
-\begin_inset Formula $V(\gamma,\pi)$
+
+\begin_inset Formula $ii)$
 \end_inset
 
- by Monte Carlo integration using at least 10,000 draws.
- Then consider the two following insurance policies:
+ Consider the two following insurance policies:
 \begin_inset Newline newline
 \end_inset
 
@@ -700,7 +812,7 @@ status open
 
 \begin_layout Plain Layout
 
-[4)]
+[4.]
 \end_layout
 
 \end_inset
@@ -724,7 +836,11 @@ status open
 \begin_inset Newline newline
 \end_inset
 
-Given a customer wanting 
+
+\begin_inset Formula $i)$
+\end_inset
+
+ Given a customer wanting 
 \begin_inset Formula $\gamma=0.95$
 \end_inset
 

@@ -233,7 +233,7 @@ A single self-contained notebook (.ipynb) presenting the analysis.
 \end_layout
 
 \begin_layout Enumerate
-(Optionally) Fully documented Python module files (.py).
+Fully documented Python module files (.py).
 \end_layout
 
 \begin_layout Enumerate
@@ -279,7 +279,7 @@ github.com/projects-2022-YOURGROUPNAME/dataproject/
 \series bold
 Deadline:
 \series default
- 10th of April 23.59
+ 17th of April 23.59
 \end_layout
 
 \begin_layout Itemize
