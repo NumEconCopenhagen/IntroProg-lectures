@@ -123,7 +123,22 @@ Programming is more than writing code.
  it, and present the results.
  The bullets below are minimum requirements, but otherwise it is very much
  up to you, what you will like to do with your project.
- I hope to see some creative ideas!
+ You can use pretty much any economic model that you have encountered during
+ your studies.
+ It is not a bad idea to do further work on a model you already have a good
+ understanding of; for instance what you have been working at in a seminar
+ or in your bachelor thesis.
+ You can also pick one of the models listed in the last section.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Note: 
+\series default
+the Solow model was demonstrated in lectures as well as in exercise class.
+ The requirements for doing a passable project with that model are therefore
+ higher than if you start from scratch with another model.
 \end_layout
 
 \begin_layout Itemize
@@ -163,7 +178,7 @@ Content:
 
 \begin_deeper
 \begin_layout Enumerate
-Describe an algorithm on how to solve a simple economic model 
+Describe an algorithm on how to solve your economic model 
 \begin_inset Newline newline
 \end_inset
 
@@ -172,7 +187,8 @@ Describe an algorithm on how to solve a simple economic model
 \end_layout
 
 \begin_layout Enumerate
-Solve (and perhaps simulate) a simple economic model.
+Solve the model using an optimization routine or an equation solver and
+ simulate it.
 \end_layout
 
 \begin_layout Enumerate
@@ -214,7 +230,7 @@ A single self-contained notebook (.ipynb) presenting the analysis
 \end_layout
 
 \begin_layout Enumerate
-(Optionally) Fully documented Python files (.py)
+Fully documented Python files (.py)
 \end_layout
 
 \begin_layout Standard
@@ -296,6 +312,61 @@ General advice:
  and such.
  You can then begin to optimize it when things seem to work the way you
  intend.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Examples of models you could implement in the project
+\end_layout
+
+\begin_layout Standard
+You have most likely encountered some of these models during your core BA
+ courses or in the elective courses.
+ You can look them up in standard textbooks or google them.
+ Also, these are just ideas, you are absolutely free to come up with something
+ else.
+\end_layout
+
+\begin_layout Itemize
+The CAPM model.
+\end_layout
+
+\begin_layout Itemize
+The monocentric city model for city structure.
+\end_layout
+
+\begin_layout Itemize
+The market for lemons.
+\end_layout
+
+\begin_layout Itemize
+The Lucas islands model.
+\end_layout
+
+\begin_layout Itemize
+The consumption-savings model from L11 (but with a new feature).
+\end_layout
+
+\begin_layout Itemize
+Stackelberg competetion.
+\end_layout
+
+\begin_layout Itemize
+The Hecksher-Ohlin model.
+\end_layout
+
+\begin_layout Itemize
+Optimal extraction of non-renewable resources.
+\end_layout
+
+\begin_layout Itemize
+VaR (value at risk) as a tool for regulating capital requirements of banks.
 \end_layout
 
 \end_body
