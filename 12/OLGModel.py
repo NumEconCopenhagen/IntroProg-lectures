@@ -1,16 +1,22 @@
 from types import SimpleNamespace
+import time
 import numpy as np
 from scipy import optimize
 
 class OLGModelClass():
 
-    def __init__(self):
+    def __init__(self,do_print=True):
         """ create the model """
+
+        if do_print: print('initializing the model:')
 
         self.par = SimpleNamespace()
         self.sim = SimpleNamespace()
 
+        if do_print: print('calling .setup()')
         self.setup()
+
+        if do_print: print('calling .allocate()')
         self.allocate()
     
     def setup(self):
@@ -52,10 +58,12 @@ class OLGModelClass():
         # b. allocate
         allvarnames = household + firm + prices + government
         for varname in allvarnames:
-            setattr(sim,varname,np.nan*np.ones(par.simT))
+            sim.__dict__[varname] = np.nan*np.ones(par.simT)
 
-    def simulate(self):
+    def simulate(self,do_print=True):
         """ simulate model """
+
+        t0 = time.time()
 
         par = self.par
         sim = self.sim
@@ -68,7 +76,7 @@ class OLGModelClass():
         for t in range(par.simT):
             
             # i. simulate before s
-            simulate_before_s(par,sim,t)  
+            simulate_before_s(par,sim,t)
 
             if t == par.simT-1: continue          
 
@@ -76,17 +84,16 @@ class OLGModelClass():
             s_min,s_max = find_s_bracket(par,sim,t)
 
             # ii. find optimal s
-            result = optimize.root_scalar(target_s,
-                bracket=(s_min,s_max),
-                method='bisect',
-                args=(par,sim,t))
-
+            obj = lambda s: calc_euler_error(s,par,sim,t=0)
+            result = optimize.root_scalar(obj,bracket=(s_min,s_max),method='bisect')
             s = result.root
 
             # iii. simulate after s
             simulate_after_s(par,sim,t,s)
 
-def find_s_bracket(par,sim,t,maxiter=500):
+        if do_print: print(f'simulation done in {time.time()-t0:.2f} secs')
+
+def find_s_bracket(par,sim,t,maxiter=500,do_print=False):
     """ find bracket for s to search in """
 
     # a. maximum bracket
@@ -94,7 +101,9 @@ def find_s_bracket(par,sim,t,maxiter=500):
     s_max = 1.0 - 1e-8 # save almost everything
 
     # b. saving a lot is always possible 
-    sign_max = np.sign(target_s(s_max,par,sim,t))
+    value = calc_euler_error(s_max,par,sim,t)
+    sign_max = np.sign(value)
+    if do_print: print(f'euler-error for s = {s_max:12.8f} = {value:12.8f}')
 
     # c. find bracket      
     lower = s_min
@@ -105,7 +114,9 @@ def find_s_bracket(par,sim,t,maxiter=500):
                 
         # i. midpoint and value
         s = (lower+upper)/2 # midpoint
-        value = target_s(s,par,sim,t)
+        value = calc_euler_error(s,par,sim,t)
+
+        if do_print: print(f'euler-error for s = {s:12.8f} = {value:12.8f}')
 
         # ii. check conditions
         valid = not np.isnan(value)
@@ -114,6 +125,10 @@ def find_s_bracket(par,sim,t,maxiter=500):
         # iii. next step
         if valid and correct_sign: # found!
             s_min = s
+            s_max = upper
+            if do_print: 
+                print(f'bracket to search in with opposite signed errors:')
+                print(f'[{s_min:12.8f}-{s_max:12.8f}]')
             return s_min,s_max
         elif not valid: # too low s -> increase lower bound
             lower = s
@@ -125,7 +140,7 @@ def find_s_bracket(par,sim,t,maxiter=500):
 
     raise Exception('cannot find bracket for s')
 
-def target_s(s,par,sim,t):
+def calc_euler_error(s,par,sim,t):
     """ target function for finding s with bisection """
 
     # a. simulate forward

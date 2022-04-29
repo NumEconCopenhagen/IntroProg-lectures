@@ -4,14 +4,19 @@ from scipy import optimize
 
 class RamseyModelClass():
 
-    def __init__(self):
+    def __init__(self,do_print=True):
         """ create the model """
+
+        if do_print: print('initializing the model:')
 
         self.par = SimpleNamespace()
         self.ss = SimpleNamespace()
         self.path = SimpleNamespace()
 
+        if do_print: print('calling .setup()')
         self.setup()
+
+        if do_print: print('calling .allocate()')
         self.allocate()
     
     def setup(self):
@@ -33,7 +38,7 @@ class RamseyModelClass():
         # c. initial
         par.K_lag_ini = 1.0
 
-        # c. misc
+        # d. misc
         par.solver = 'broyden' # solver for the equation syste, 'broyden' or 'scipy'
         par.Tpath = 500 # length of transition path, "truncation horizon"
 
@@ -45,7 +50,7 @@ class RamseyModelClass():
 
         allvarnames = ['A','K','C','rk','w','r','Y','K_lag']
         for varname in allvarnames:
-            setattr(path,varname,np.nan*np.ones(par.Tpath))
+            path.__dict__[varname] =  np.nan*np.ones(par.Tpath)
 
     def find_steady_state(self,KY_ss,do_print=True):
         """ find steady state """
@@ -144,7 +149,7 @@ class RamseyModelClass():
             # iii. numerical derivative
             jac[:,i] = (alt-base)/h
         
-    def solve(self):
+    def solve(self,do_print=True):
         """ solve for the transition path """
 
         par = self.par
@@ -170,7 +175,8 @@ class RamseyModelClass():
 
         # c. call solver
         if par.solver == 'broyden':
-            x = broyden_solver(eq_sys,x0,self.jac,do_print=True)
+
+            x = broyden_solver(eq_sys,x0,self.jac,do_print=do_print)
         
         elif par.solver == 'scipy':
             
@@ -183,7 +189,7 @@ class RamseyModelClass():
 
         else:
 
-            raise Exception('unknown solver')
+            raise NotImplementedError('unknown solver')
             
 
         # d. final evaluation
