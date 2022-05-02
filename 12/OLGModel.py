@@ -84,7 +84,7 @@ class OLGModelClass():
             s_min,s_max = find_s_bracket(par,sim,t)
 
             # ii. find optimal s
-            obj = lambda s: calc_euler_error(s,par,sim,t=0)
+            obj = lambda s: calc_euler_error(s,par,sim,t=t)
             result = optimize.root_scalar(obj,bracket=(s_min,s_max),method='bisect')
             s = result.root
 
@@ -181,7 +181,7 @@ def simulate_before_s(par,sim,t):
 
     else:
 
-        raise Exception('unknown type of production function')
+        raise NotImplementedError('unknown type of production function')
 
     # b. no-arbitrage and after-tax return
     sim.r[t] = sim.rk[t]-par.delta # after-depreciation return
