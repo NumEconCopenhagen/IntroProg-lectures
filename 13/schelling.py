@@ -17,13 +17,14 @@ class Simulation:
     def __init__(self):
 
         # a. Baseline parameters
-        self.n_dim = 10 
+        self.n_dim = 20 
         self.check_prints = False
         self.cutoff = 0.7
         self.T = 5
         self.t = 0
         self.share_pop = 0.8
         self.share_A = 0.5
+        self.plot_size = 6
         self._set_dimensions() # Compute dimensions of landscape and population 
         
         # b. Containers for agents and squares
@@ -245,15 +246,17 @@ class Simulation:
             save_plot (bool): if true, the created plot is stored in figs/
             suppress_plot (bool): if true, the plot is not displayed
         '''
+        
+        
 
         # a. Display a saved figure if show_t is provided
         if show_t is not None:
             if show_t >= 0 & show_t < len(self.figs):
                 ipth = self.figs[show_t]
                 image = img.imread(ipth)
-                _, ax = pyplot.subplots(figsize=(9,11))
-                ax.imshow(image)
-                ax.axis('off') 
+                _, ax = pyplot.subplots(figsize=(self.plot_size+3,self.plot_size+3));
+                ax.imshow(image);
+                ax.axis('off') ;
                 return
 
         # b. Create a 2d numpy array with square states 
@@ -270,6 +273,7 @@ class Simulation:
                 raise Exception('plot_state: Unknown agent type at square')
 
         # c. Use a Seaborn heatmap for plotting the simulation landscape
+        pyplot.figure(figsize=(self.plot_size,self.plot_size))
         ax = seaborn.heatmap(data, linewidth=0, xticklabels=False,
                              yticklabels=False, cbar=False, cmap='YlGnBu')
         ax.set_title(f'Landscape at iteration {self.t}')
