@@ -87,15 +87,15 @@ def v(c,s,m,mp,v_nxt_interp):
         m_nxt = (1+mp.r)*a + y
         
         # ii. values in next period 
-        v_nxt = v_nxt_interp([m_nxt])[0]
+        v_nxt_y = v_nxt_interp([m_nxt])[0]
         
         # iii. probability weighted sum of values
-        v_nxt += prb*v_nxt
+        v_nxt += prb*v_nxt_y
     
     # b. total value
     return utility(c,mp) + mp.beta*v_nxt
 
-def solve_single_period(mp,v_nxt_interp):
+def solve_single_period(mp,v_nxt_interp,m_grid=None):
     ''' Solve a single period's objective of choosing optimal consumption and schooling level
 
     Args:
@@ -111,7 +111,9 @@ def solve_single_period(mp,v_nxt_interp):
     '''
 
     # a. allocate
-    m_grid = np.linspace(mp.m_min,mp.m_max,mp.Nm)
+    if m_grid is None:
+        m_grid = np.linspace(mp.m_min,mp.m_max,mp.Nm)
+        
     v_func = np.empty(mp.Nm)
     c_func = np.empty(mp.Nm)
     s_func = np.empty(mp.Nm)
@@ -165,7 +167,7 @@ def solve(mp):
     # b. solve period 1
     m1_grid,v1_func,c1_func,s_func,v1_schoice = solve_single_period(mp,v2_func_interp)
     
-    return m1_grid, c1_func, s_func, v1_func, m2_grid, c2_func, v1_schoice
+    return m1_grid, c1_func, s_func, v1_func, m2_grid, c2_func,v2_func, v1_schoice
 
 
 
