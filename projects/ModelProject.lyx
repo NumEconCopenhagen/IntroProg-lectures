@@ -94,10 +94,6 @@
 Project 2: Model Analysis Project
 \end_layout
 
-\begin_layout Author
-Christian Langholz Carstensen
-\end_layout
-
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -242,7 +238,7 @@ Example of structure:
 \begin_inset CommandInset href
 LatexCommand href
 name "See this repository"
-target "https://github.com/NumEconCopenhagen/example-2022"
+target "https://github.com/NumEconCopenhagen/IntroProg-example"
 literal "false"
 
 \end_inset
@@ -274,7 +270,7 @@ On GitHub by uploading it to the folder:
 
 \begin_deeper
 \begin_layout Quote
-github.com/projects-2022-YOURGROUPNAME/modelproject/
+github.com/projects-YEAR-YOURGROUPNAME/modelproject/
 \end_layout
 
 \end_deeper
@@ -283,7 +279,7 @@ github.com/projects-2022-YOURGROUPNAME/modelproject/
 \series bold
 Deadline:
 \series default
- 13th of May 23.59
+ See Absalon.
 \end_layout
 
 \begin_layout Itemize

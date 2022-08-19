@@ -95,10 +95,6 @@
 Project 0: Inaugural Project
 \end_layout
 
-\begin_layout Author
-Christian Langholz Carstensen
-\end_layout
-
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -174,7 +170,7 @@ Example of structure:
 \begin_inset CommandInset href
 LatexCommand href
 name "See this repository"
-target "https://github.com/NumEconCopenhagen/example-2022"
+target "https://github.com/NumEconCopenhagen/IntroProg-example"
 literal "false"
 
 \end_inset
@@ -219,25 +215,16 @@ inaugralproject
 
 \begin_deeper
 \begin_layout Quote
-github.com/NumEconCopenhagen/projects-2022-YOURGROUPNAME
+github.com/NumEconCopenhagen/projects-YEAR-YOURGROUPNAME
 \end_layout
 
 \begin_layout Enumerate
 Create your GitHub repository if you have not already done so.
- Go to 
-\begin_inset CommandInset href
-LatexCommand href
-name "Github"
-target "https://classroom.github.com/a/BaiWsAXt"
-literal "false"
-
-\end_inset
-
- and follow step 1 in 
+ Follow 
 \begin_inset CommandInset href
 LatexCommand href
 name "this guide"
-target "https://numeconcopenhagen.netlify.app/guides/make-repo/"
+target "https://sites.google.com/view/numeconcph-introprog/guides/git#h.ov2tzjdlccn4"
 literal "false"
 
 \end_inset
@@ -267,7 +254,7 @@ Stage, commit and push all your relevant files to the repository on Github.
 \series bold
 Deadline:
 \series default
- 27th of March 23.59
+ See Absalon
 \end_layout
 
 \begin_deeper
@@ -523,24 +510,6 @@ s and
 
 s and write what the graph suggests about the general solution to the agent's
  problem? (You can verify the finding analytically if you will).
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Enumerate
-Note: you can apply scipy's
-\family typewriter
- optimize.minimize_scalar
-\family default
-.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Enumerate

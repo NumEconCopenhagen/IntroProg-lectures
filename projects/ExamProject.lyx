@@ -160,7 +160,7 @@ Example of structure:
 \begin_inset CommandInset href
 LatexCommand href
 name "See this repository"
-target "https://github.com/NumEconCopenhagen/example-2022"
+target "https://github.com/NumEconCopenhagen/IntroProg-example"
 literal "false"
 
 \end_inset

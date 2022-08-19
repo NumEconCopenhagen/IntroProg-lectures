@@ -1,0 +1,694 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\date{}
+\usepackage{geometry}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.7cm
+\topmargin 1cm
+\rightmargin 2cm
+\bottommargin 2.7cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\shape smallcaps
+\size largest
+Project 0: Inaugural Project
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-3mm}
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\series bold
+Vision: 
+\series default
+The inaugural project teaches you to solve a simple economic model and present
+ the results.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Objectives:
+\series default
+ In your inaugural project, you should show that you can:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Apply simple numerical solution and simulation methods
+\end_layout
+
+\begin_layout Enumerate
+Structure a code project
+\end_layout
+
+\begin_layout Enumerate
+Document code
+\end_layout
+
+\begin_layout Enumerate
+Present results in text form and in figures
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Content:
+\series default
+ In your inaugural project, you should:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Solve and simulate a pre-specified economic model (see next page)
+\end_layout
+
+\begin_layout Enumerate
+Visualize results
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example of structure: 
+\series default
+
+\begin_inset CommandInset href
+LatexCommand href
+name "See this repository"
+target "https://github.com/NumEconCopenhagen/example-2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Structure: 
+\series default
+Your inaugural  project should consist of:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A README.md with a short introduction to your project
+\end_layout
+
+\begin_layout Enumerate
+A single self-contained notebook (.ipynb) presenting the analysis
+\end_layout
+
+\begin_layout Enumerate
+Fully documented Python files (.py)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Hand-in: 
+\series default
+On GitHub by uploading it to the subfolder 
+\emph on
+inaugralproject
+\emph default
+, which is located in:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+github.com/NumEconCopenhagen/projects-YEAR-YOURGROUPNAME
+\end_layout
+
+\begin_layout Enumerate
+Create your GitHub repository if you have not already done so.
+ Follow 
+\begin_inset CommandInset href
+LatexCommand href
+name "this guide"
+target "https://sites.google.com/view/numeconcph-introprog/guides/git#h.ov2tzjdlccn4"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Test 
+\series default
+if your notebook
+\series bold
+ runs: 
+\series default
+Restart the notebook kernel and run all cells.
+\end_layout
+
+\begin_layout Enumerate
+Stage, commit and push all your relevant files to the repository on Github.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Deadline:
+\series default
+ See Abslon.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Exam: 
+\series default
+Your inaugural project will be a part of your exam portfolio.
+\begin_inset Newline newline
+\end_inset
+
+You can incorporate feedback before handing in the final version.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newgeometry{left=3cm,right=3cm,top=2.5cm,bottom=2.5cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Housing demand and taxation
+\end_layout
+
+\begin_layout Standard
+The following exercise is a very simplified emulation of the tax reform
+ that will be implemented in Denmark in 2024.
+ The numbers are made up, but you can read more 
+\begin_inset CommandInset href
+LatexCommand href
+name "here"
+target "https://www.skm.dk/aktuelt/boligskat/"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset href
+LatexCommand href
+name "here"
+target "https://www.skm.dk/media/6922/endelig-aftaletekst-kompensation-til-boligejerne-for-udskydelse-af-boligskatteomlaegningen-pr-20200512-12-2.pdf"
+literal "false"
+
+\end_inset
+
+.
+ Unfortunately only in Danish.
+ 
+\begin_inset Newline newline
+\end_inset
+
+We consider a household looking to buy a home.
+ The household is endowed with an amount of cash-on-hand, 
+\begin_inset Formula $m$
+\end_inset
+
+, that may spent on housing as well as other consumption 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ The household derives utility from housing by a measure of its quality,
+ 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ A home of quality 
+\begin_inset Formula $h$
+\end_inset
+
+ has the price 
+\begin_inset Formula $p_{h}$
+\end_inset
+
+ and is subject to progressive taxation and mortgage costs, summarized by
+ the function 
+\begin_inset Formula $\tau(\cdot)$
+\end_inset
+
+.
+ The objective of the household is therefore to choose optimal amounts of
+ housing and consumption
+\begin_inset Formula 
+\begin{eqnarray}
+c^{\star},h^{\star} & = & \arg\max_{c,h}c^{1-\phi}h^{\phi}\\
+ & s.t.\nonumber \\
+\widetilde{p}_{h} & = & p_{h}\varepsilon\\
+m & = & \tau(p_{h},\widetilde{p}_{h})+c\\
+\tau(p_{h},\widetilde{p}_{h}) & = & rp_{h}+\tau^{g}\widetilde{p}_{h}+\tau^{p}\max\left\{ \widetilde{p}_{h}-\overline{p},0\right\} 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To clarify the restrictions (2)-(4): homes are not taxed according to their
+ market value, 
+\begin_inset Formula $p_{h}$
+\end_inset
+
+, but instead according to a public assessment, denoted 
+\begin_inset Formula $\widetilde{p}_{h}$
+\end_inset
+
+.
+ The public assessments are politically set below market value by a factor
+ of 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ in (2).
+ Equation (3) states that cash-on-hand is divided between housing costs
+ and consumption.
+ The first element of equation (4) states that the household will purchase
+ its home with no down-payment and an interest-only mortgage carrying the
+ interest 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ The second element is the base housing tax levied on the assessment, while
+ the last element is a progressive housing tax.
+ That is, home values above the cutoff 
+\begin_inset Formula $\overline{p}$
+\end_inset
+
+ are taxed at an additional rate of 
+\begin_inset Formula $\tau^{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Questions
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[1)]
+\end_layout
+
+\end_inset
+
+ Construct a function that solves household's problem above.
+ We let the market price of a home be equal to it's quality: 
+\begin_inset Formula 
+\[
+p_{h}=h
+\]
+
+\end_inset
+
+ and assume that the household in question has cash-on-hand 
+\begin_inset Formula $m=0.5$
+\end_inset
+
+.
+ Notice that the monetary units is in millions DKK.
+ In addition, use the following parameters
+\begin_inset Formula 
+\[
+\phi=0.3,\,\varepsilon=0.5,\,r=0.03,\,\tau^{g}=0.012,\,\tau^{p}=0.004,\,\overline{p}=3
+\]
+
+\end_inset
+
+
+\emph on
+tip: you do not have to use bounded optimization (but you can of course).
+ 
+\begin_inset Newline newline
+\end_inset
+
+tip: use the built-in function max() to model equation (4).
+ Do not use np.max().
+\begin_inset Newline newline
+\end_inset
+
+suggestion: use a dictionary to store all the parameters by their names.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[2)]
+\end_layout
+
+\end_inset
+
+ Plot 
+\begin_inset Formula $c^{\star}$
+\end_inset
+
+ and 
+\begin_inset Formula $h^{\star}$
+\end_inset
+
+ as functions of 
+\begin_inset Formula $m$
+\end_inset
+
+ in the range 0.4 to 1.5.
+\end_layout
+
+\begin_layout Standard
+Now consider a whole population of 
+\begin_inset Formula $N=10,000$
+\end_inset
+
+ households looking to buy homes.
+ The households differ by their cash-on-hand.
+ Assume that the distribution of cash-on-hand is given by
+\begin_inset Formula 
+\[
+m_{i}\sim\mathtt{Lognormal}(-0.4,0.35)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\noun on
+Note
+\noun default
+: when generating random numbers throughout the assignment, use the seed
+ 1.
+\end_layout
+
+\begin_layout Standard
+We let the public assessment associated with the optimal housing choice
+ of household 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $h_{i}^{\star}$
+\end_inset
+
+, be denoted 
+\begin_inset Formula $\widetilde{p}_{h,i}^{\star}$
+\end_inset
+
+.
+ The total tax revenue 
+\begin_inset Formula $T$
+\end_inset
+
+ collected under this parameterization is then 
+\begin_inset Formula 
+\[
+T=\sum_{i=1}^{N}\tau^{g}\widetilde{p}_{h,i}^{\star}+\tau^{p}\max\left\{ \widetilde{p}_{h,i}^{\star}-\overline{p},0\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[3)]
+\end_layout
+
+\end_inset
+
+ Calculate the average tax burden pr household 
+\begin_inset Formula $T/N$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+tip: create a function to calculate 
+\begin_inset Formula $T$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Bonus question (optional): try and plot the distributions of cash-on-hand
+ and 
+\begin_inset Formula $h^{\star}$
+\end_inset
+
+.
+ Notice something odd about the distributions - what do you think may be
+ the cause?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[4)]
+\end_layout
+
+\end_inset
+
+ The policy maker decides to reform the tax system on housing.
+ Calculate the average taxes that will occur with the following changes
+ to parameters:
+\begin_inset Formula 
+\[
+\varepsilon=0.8,\,\tau^{g}=0.01,\,\tau^{p}=0.009,\,\overline{p}=8
+\]
+
+\end_inset
+
+ while the other parameters remain the same.
+
+\emph on
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+tip: create a new dictionary with updated parameters, such that you can
+ easily switch between the new set of parameters and the old one.
+ Careful with copying!
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[5)]
+\end_layout
+
+\end_inset
+
+ Now, instead of implementing the reform in 4) directly, the policy maker
+ wants to ensure that the average home owner does not pay more in housing
+ taxes.
+ The policy maker therefore imposes that reform changes to 
+\begin_inset Formula $\varepsilon,\tau^{p},\overline{p}$
+\end_inset
+
+ will be offset by lowering 
+\begin_inset Formula $\tau^{g}$
+\end_inset
+
+ such that average tax payments are unchaged from before the reform.
+ Calculate the new 
+\begin_inset Formula $\tau^{g}$
+\end_inset
+
+ that meets this requirement.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+tip: if this takes a long time on your computer, use a lower 
+\begin_inset Formula $N$
+\end_inset
+
+ and re-run 3)-4).
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+restoregeometry
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

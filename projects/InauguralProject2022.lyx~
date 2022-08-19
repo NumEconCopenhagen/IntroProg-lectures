@@ -1,0 +1,869 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\date{}
+\usepackage{geometry}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.7cm
+\topmargin 1cm
+\rightmargin 2cm
+\bottommargin 2.7cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\shape smallcaps
+\size largest
+Project 0: Inaugural Project
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-3mm}
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\series bold
+Vision: 
+\series default
+The inaugural project teaches you to solve a simple economic model and present
+ the results.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Objectives:
+\series default
+ In your inaugural project, you should show that you can:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Apply simple numerical solution and simulation methods
+\end_layout
+
+\begin_layout Enumerate
+Structure a code project
+\end_layout
+
+\begin_layout Enumerate
+Document code
+\end_layout
+
+\begin_layout Enumerate
+Present results in text form and in figures
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Content:
+\series default
+ In your inaugural project, you should:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Solve and simulate a pre-specified economic model (see next page)
+\end_layout
+
+\begin_layout Enumerate
+Visualize results
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example of structure: 
+\series default
+
+\begin_inset CommandInset href
+LatexCommand href
+name "See this repository"
+target "https://github.com/NumEconCopenhagen/IntroProg-example"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Structure: 
+\series default
+Your inaugural  project should consist of:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A README.md with a short introduction to your project
+\end_layout
+
+\begin_layout Enumerate
+A single self-contained notebook (.ipynb) presenting the analysis
+\end_layout
+
+\begin_layout Enumerate
+Fully documented Python files (.py)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Hand-in: 
+\series default
+On GitHub by uploading it to the subfolder 
+\emph on
+inaugralproject
+\emph default
+, which is located in:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+github.com/NumEconCopenhagen/projects-YEAR-YOURGROUPNAME
+\end_layout
+
+\begin_layout Enumerate
+Create your GitHub repository if you have not already done so.
+ Follow 
+\begin_inset CommandInset href
+LatexCommand href
+name "this guide"
+target "https://sites.google.com/view/numeconcph-introprog/guides/git#h.ov2tzjdlccn4"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Test 
+\series default
+if your notebook
+\series bold
+ runs: 
+\series default
+Restart the notebook kernel and run all cells.
+\end_layout
+
+\begin_layout Enumerate
+Stage, commit and push all your relevant files to the repository on Github.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Deadline:
+\series default
+ See Abslon
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Peer feedback: 
+\series default
+After handing in, you will be asked to give peer feedback on the projects
+ of two other groups.
+\begin_inset Newline newline
+\end_inset
+
+The solution will be made available after the peer feedback round has ended.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Exam: 
+\series default
+Your inaugural project will be a part of your exam portfolio.
+\begin_inset Newline newline
+\end_inset
+
+You can incorporate feedback before handing in the final version.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newgeometry{left=3cm,right=3cm,top=2.5cm,bottom=2.5cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Getting an insurance
+\end_layout
+
+\begin_layout Standard
+We will here work with a benchmark model of insurance policies, Mossin's
+ model.
+ We are dealing with an agent wanting to get an insurance.
+ The agent holds assets 
+\begin_inset Formula $y$
+\end_inset
+
+ and may suffer a monetary loss 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ For now we assume that the loss is incurred with probability 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Utility of assets is given by 
+\begin_inset Formula $u(\cdot)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+If the agent is not insured, expected value is 
+\begin_inset Formula 
+\[
+V_{0}=pu(y-x)+(1-p)u(y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The agent may however obtain an insurance contract to mitigate a loss.
+ The contract consists of a coverage amount 
+\begin_inset Formula $q$
+\end_inset
+
+ and a premium 
+\begin_inset Formula $\pi$
+\end_inset
+
+.
+ The coverage cannot exceed the loss so 
+\begin_inset Formula $q\in[0,x]$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi$
+\end_inset
+
+ must be paid irrespective of whether a loss was incurred.
+ To not go broke, the insurance company must require higher premium for
+ better coverage.
+ It therefore implements a premium policy 
+\begin_inset Formula 
+\[
+\pi(p,q)=pq,
+\]
+
+\end_inset
+
+An insured agent will thus have expected utility 
+\begin_inset Formula 
+\[
+V(q;\pi)=pu(y-x+q-\pi(p,q))+(1-p)u(y-\pi(p,q))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To solve the model numerically, we let 
+\begin_inset Formula $u$
+\end_inset
+
+ be given by the function 
+\begin_inset Formula 
+\[
+u(z)=\frac{z^{1+\vartheta}}{1+\vartheta}
+\]
+
+\end_inset
+
+And use the following parameterization.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y=1,\thinspace\thinspace p=0.2,\thinspace\thinspace\vartheta=-2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Questions 
+\size normal
+(sub-questions in roman numbers)
+\size default
+:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[1.]
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $i)$
+\end_inset
+
+ Construct a function that takes 
+\begin_inset Formula $(x,y,p)$
+\end_inset
+
+ as arguments and returns the agents' optimal insurance coverage: 
+\begin_inset Formula 
+\[
+q^{\star}=\textrm{argmax}_{q\in[0,x]}V(q;\pi)
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $ii)$
+\end_inset
+
+ Make a grid of 
+\begin_inset Formula $x$
+\end_inset
+
+ in the range 
+\begin_inset Formula $[0.01,0.9]$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $iii)$
+\end_inset
+
+ For each 
+\begin_inset Formula $x$
+\end_inset
+
+, calculate 
+\begin_inset Formula $q^{\star}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $iv)$
+\end_inset
+
+ Plot the 
+\begin_inset Formula $x$
+\end_inset
+
+s and 
+\begin_inset Formula $q^{\star}$
+\end_inset
+
+s and write what the graph suggests about the general solution to the agent's
+ problem? (You can verify the finding analytically if you will).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[2.]
+\end_layout
+
+\end_inset
+
+ We would like to find the set of 
+\begin_inset Formula $acceptable$
+\end_inset
+
+ contracts from the agent's point of view.
+ This would be all the contracts 
+\begin_inset Formula $(q,\pi)$
+\end_inset
+
+ which ensure an expected value at least as good as if not having an insurance,
+ 
+\begin_inset Formula $V(q;\pi)=V_{0}$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $i)$
+\end_inset
+
+ Let the loss be 
+\begin_inset Formula $x$
+\end_inset
+
+= 0.6 and construct a grid of 
+\begin_inset Formula $q$
+\end_inset
+
+ over 
+\begin_inset Formula $[0.01,0.6]$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $ii)$
+\end_inset
+
+ Think now of 
+\begin_inset Formula $\pi$
+\end_inset
+
+ as a 
+\begin_inset Formula $variabel$
+\end_inset
+
+ that has to be solved for (instead of it being a function of 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $q$
+\end_inset
+
+ as before).
+ Loop over each element in the grid of 
+\begin_inset Formula $q$
+\end_inset
+
+s and find the corresponding 
+\begin_inset Formula $\tilde{\pi}$
+\end_inset
+
+ such that 
+\begin_inset Formula $V(q;\tilde{\pi})=V_{0}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $iii)$
+\end_inset
+
+ Make a plot of the acceptable premiums 
+\begin_inset Formula $\tilde{\pi}$
+\end_inset
+
+ (the 
+\begin_inset Formula $q$
+\end_inset
+
+ grid on the x-axis).
+ Add to the diagram the function 
+\begin_inset Formula $\pi(p,q)=pq$
+\end_inset
+
+ from before, which gives the premiums that the insurance company need at
+ least in order to break even at each 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ Taken together, these two graphs map out the set of feasible premiums for
+ a given 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Try to make the graph pretty and informative (as if it was going into a
+ text book or paper).
+ That is, use shading, labels, titles etc.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[3.]
+\end_layout
+
+\end_inset
+
+ We will now consider a modification to the setup where the loss 
+\begin_inset Formula $x$
+\end_inset
+
+ is drawn from a beta distribution and the coverage 
+\begin_inset Formula $q$
+\end_inset
+
+ is a 
+\begin_inset Formula $fraction$
+\end_inset
+
+ of 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Specifically, we'll set 
+\begin_inset Formula 
+\[
+q=\gamma x,\,\,\,\,\gamma\in[0,1]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x\AC\textrm{Beta}(\alpha,\beta),\,\,\thinspace\thinspace\alpha=2,\thinspace\thinspace\beta=7
+\]
+
+\end_inset
+
+which means that the agent's value is written as
+\begin_inset Formula 
+\[
+V(\gamma,\pi)=\int_{0}^{1}u(y-(1-\gamma)x-\pi)f(x)dx
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $f(\cdot)$
+\end_inset
+
+ is the density of the Beta distribution.
+ Note that the Beta distribution has support in 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ which explains the limits in the integral.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $i)$
+\end_inset
+
+ Create a function that computes 
+\begin_inset Formula $V(\gamma,\pi)$
+\end_inset
+
+ by Monte Carlo integration using at least 10,000 draws.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $ii)$
+\end_inset
+
+ Consider the two following insurance policies:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $(\gamma,\pi)^{1}=(0.9,0.2)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $(\gamma,\pi)^{2}=(0.45,0.1)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Which one is preferable to the agent?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[4.]
+\end_layout
+
+\end_inset
+
+ We now consider the situation from the insurance company's viewpoint.
+ They know the parameters of the loss distribution.
+ Their policy is to let customers set a coverage ratio 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ and then return an offer on the premium 
+\begin_inset Formula $\pi$
+\end_inset
+
+ to maximize profits.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $i)$
+\end_inset
+
+ Given a customer wanting 
+\begin_inset Formula $\gamma=0.95$
+\end_inset
+
+, what is the profit maximizing premium, 
+\begin_inset Formula $\pi^{\star}$
+\end_inset
+
+?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\shape italic
+Hint 1:
+\shape default
+ 
+\shape italic
+the insurance company acts as a monopolist, so the offer is only just acceptable
+ to the client.
+
+\shape default
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\shape italic
+Hint 2: you will probably want to use the 'broyden1' method when calling
+ scipy's root finder.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+restoregeometry
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

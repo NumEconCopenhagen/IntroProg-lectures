@@ -94,10 +94,6 @@
 Peer Feedback
 \end_layout
 
-\begin_layout Author
-Christian Carstensen
-\end_layout
-
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -184,7 +180,11 @@ These sheets are produced by
 \family typewriter
 PeerFeedbackAssignments.ipynb
 \family default
- which is located in projects folder of Lectures2022.
+ which is located in projects folder of 
+\emph on
+IntroProg-lecture
+\emph default
+.
  Each team has a peer_group_1 and peer_group_2 to which they must give feedback.
  The assignment of peers to teams is randomized and you will get independent
  draws for the data project and the model project.
@@ -203,7 +203,7 @@ status open
 
 
 \backslash
-url{https://github.com/NumEconCopenhagen/projects-2022-GROUPNAME}
+url{https://github.com/NumEconCopenhagen/projects-YEAR-GROUPNAME}
 \end_layout
 
 \end_inset
@@ -260,7 +260,7 @@ status open
 
 
 \backslash
-url{https://github.com/NumEconCopenhagen/example-2022/issues}
+url{https://github.com/NumEconCopenhagen/IntroProg-example/issues}
 \end_layout
 
 \end_inset
@@ -327,11 +327,11 @@ Deadlines:
 \end_layout
 
 \begin_layout Enumerate
-Inaugural project feedback: 3rd of April 23:59.
+Inaugural project feedback: See Absalon.
 \end_layout
 
 \begin_layout Enumerate
-Data project feedback: 24th of April 23:59.
+Data project feedback: See Absalon.
 \end_layout
 
 \end_body
