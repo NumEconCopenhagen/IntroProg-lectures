@@ -134,23 +134,23 @@ Objectives:
 
 \begin_deeper
 \begin_layout Enumerate
-Apply data cleaning and data structuring methods (L07 and L08).
+Apply data cleaning and data structuring methods.
 \end_layout
 
 \begin_layout Enumerate
-Apply data analysis methods (L07 and L08).
+Apply data analysis methods.
 \end_layout
 
 \begin_layout Enumerate
-Structure a code project (L05).
+Structure a code project.
 \end_layout
 
 \begin_layout Enumerate
-Document code (L05).
+Document code.
 \end_layout
 
 \begin_layout Enumerate
-Present results in text form and in figures (L03, L06 and L07).
+Present results in text form and in figures.
 \end_layout
 
 \end_deeper
@@ -275,7 +275,16 @@ github.com/projects-YEAR-YOURGROUPNAME/dataproject/
 \series bold
 Deadline:
 \series default
- See Abslon.
+ See 
+\begin_inset CommandInset href
+LatexCommand href
+name "Calendar"
+target "https://sites.google.com/view/numeconcph-introprog/calendar"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize

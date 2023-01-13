@@ -152,7 +152,7 @@ Apply model analysis methods (e.g.
 \end_layout
 
 \begin_layout Enumerate
-Structure a code project (see lecture 05).
+Structure a code project.
 \end_layout
 
 \begin_layout Enumerate
@@ -179,7 +179,6 @@ Describe an algorithm on how to solve your economic model
 \end_inset
 
 (most likely taken from a textbook).
- See examples of algorithm descriptions in L09 L10.
 \end_layout
 
 \begin_layout Enumerate
@@ -279,7 +278,16 @@ github.com/projects-YEAR-YOURGROUPNAME/modelproject/
 \series bold
 Deadline:
 \series default
- See Absalon.
+ See 
+\begin_inset CommandInset href
+LatexCommand href
+name "Calendar"
+target "https://sites.google.com/view/numeconcph-introprog/calendar"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
@@ -310,59 +318,8 @@ General advice:
  intend.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection*
-Examples of models you could implement in the project
-\end_layout
-
-\begin_layout Standard
-You have most likely encountered some of these models during your core BA
- courses or in the elective courses.
- You can look them up in standard textbooks or google them.
- Also, these are just ideas, you are absolutely free to come up with something
- else.
-\end_layout
-
 \begin_layout Itemize
-The CAPM model.
-\end_layout
-
-\begin_layout Itemize
-The monocentric city model for city structure.
-\end_layout
-
-\begin_layout Itemize
-The market for lemons.
-\end_layout
-
-\begin_layout Itemize
-The Lucas islands model.
-\end_layout
-
-\begin_layout Itemize
-The consumption-savings model from L11 (but with a new feature).
-\end_layout
-
-\begin_layout Itemize
-Stackelberg competetion.
-\end_layout
-
-\begin_layout Itemize
-The Hecksher-Ohlin model.
-\end_layout
-
-\begin_layout Itemize
-Optimal extraction of non-renewable resources.
-\end_layout
-
-\begin_layout Itemize
-VaR (value at risk) as a tool for regulating capital requirements of banks.
+.
 \end_layout
 
 \end_body

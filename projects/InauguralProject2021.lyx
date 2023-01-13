@@ -218,43 +218,22 @@ inaugralproject
 github.com/NumEconCopenhagen/projects-YEAR-YOURGROUPNAME
 \end_layout
 
-\begin_layout Enumerate
-Create your GitHub repository if you have not already done so.
- Follow 
-\begin_inset CommandInset href
-LatexCommand href
-name "this guide"
-target "https://sites.google.com/view/numeconcph-introprog/guides/git#h.ov2tzjdlccn4"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-Test 
-\series default
-if your notebook
-\series bold
- runs: 
-\series default
-Restart the notebook kernel and run all cells.
-\end_layout
-
-\begin_layout Enumerate
-Stage, commit and push all your relevant files to the repository on Github.
-\end_layout
-
 \end_deeper
 \begin_layout Itemize
 
 \series bold
 Deadline:
 \series default
- See Absalon.
+ See 
+\begin_inset CommandInset href
+LatexCommand href
+name "Calendar"
+target "https://sites.google.com/view/numeconcph-introprog/calendar"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
