@@ -149,7 +149,7 @@ status open
 
 
 \backslash
-title{1.
+title{0.
  Introduction 
 \backslash
 vspace{-2mm}}
@@ -683,15 +683,15 @@ Active learning:
 
 \begin_deeper
 \begin_layout Itemize
-I can show you examples
+We can show you examples
 \end_layout
 
 \begin_layout Itemize
-I can guide you in terms of where to start
+We can guide you in terms of where to start
 \end_layout
 
 \begin_layout Itemize
-I can answer questions
+We can answer questions
 \end_layout
 
 \begin_layout Itemize
@@ -773,7 +773,7 @@ Jeppe Druedahl
 
 \begin_deeper
 \begin_layout Standard
-research: macro question, micro data, computational methods
+research: macro questions, micro data, computational methods
 \end_layout
 
 \begin_layout Standard
@@ -1342,8 +1342,8 @@ Algorithms
 \series bold
 Further perspectives
 \series default
- (canonical economic models, speed-up with comprehensions, generators, vectoriza
-tion and parallization, numba, EconModelClass)
+ (canonical economic models, structural estimation, speed-up with comprehensions
+, generators, vectorization and parallization, numba, EconModelClass, BabyMAKRO)
 \end_layout
 
 \end_deeper
@@ -1602,7 +1602,11 @@ VScode
 \begin_layout Enumerate
 Pres 
 \emph on
-Ctrl+Shift+P
+Ctrl+Shift+P 
+\emph default
+to
+\emph on
+ command control palette
 \end_layout
 
 \begin_layout Enumerate
