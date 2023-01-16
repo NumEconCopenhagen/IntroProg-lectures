@@ -36,9 +36,16 @@ Channel: https://www.youtube.com/@numeconcph
 
 Recording: CAMTASIA 8.6 (requires license key)
 
-    1. webcam in lower right above status bar
-    2. produce and share -> "MP4 only (up to 1080)
+    1. Restart + Clear Outputs of All Cells
+    2. Settings:
 
+       Jupyter-TOC: From 2 and upward (change in settings)
+       Font size: 16
+       Zoom: 1 on laptop, 3 on screen
+
+    3. Webcam in lower right above status bar
+    4. Produce and Share -> MP4 only (up to 1080p)
+       
 Uploading:
 
     1. Needs verified account for > 15 min

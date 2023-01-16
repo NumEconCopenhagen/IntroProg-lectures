@@ -827,6 +827,10 @@ Asker Nygaard Christensen
 
 \begin_deeper
 \begin_layout Standard
+research: labor economics, job search, unemployment
+\end_layout
+
+\begin_layout Standard
 e-mail: 
 \begin_inset CommandInset href
 LatexCommand href
@@ -2272,18 +2276,6 @@ Present results in text form and in figures
 
 \series bold
 Content:
-\series default
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-this could be a model from a course you are taking anyway
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -2302,16 +2294,6 @@ Visualize results across e.g.
 
 \begin_layout Enumerate
 Analyze one or more extensions of the baseline model
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-originality and craziness is awarded here
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_deeper
