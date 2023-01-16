@@ -19,9 +19,9 @@ Classroom: https://classroom.github.com/a/R_4UuvGk
 
 1. Welcome 
 
-    Introduction-slides in pdf
-    Link to first video (will be repeated)
-    Course page: https://sites.google.com/view/numeconcph-introprog/home
+    Attach 0 - Introduction/Introduction.pdf
+    Course web page: https://sites.google.com/view/numeconcph-introprog/home
+    Course Youtube channel: https://www.youtube.com/@numeconcph
     DataCamp: (not shared here)
 
 2. Inaugural project + Git + second physical lecture
@@ -39,7 +39,7 @@ Recording: CAMTASIA 8.6 (requires license key)
     1. Restart + Clear Outputs of All Cells
     2. Settings:
 
-       Jupyter-TOC: From 2 and upward (change in settings)
+       Jupyter-TOC: *Min Header Level = 2* and add *Numbering*
        Font size: 16
        Zoom: 1 on laptop, 3 on screen
 
