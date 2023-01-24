@@ -51,6 +51,6 @@ Uploading:
     1. Needs verified account for > 15 min
     2. Description: 
 
-        For "Introduction to Programming and Numerical Anlysis" targeting economists. See https://sites.google.com/view/numeconcph-introprog/home
+        For "Introduction to Programming and Numerical Analysis" targeting economists. See https://sites.google.com/view/numeconcph-introprog/home
 
     3. Playlists: IntroProg-20xx
