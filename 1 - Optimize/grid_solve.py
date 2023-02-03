@@ -50,7 +50,8 @@ def print_solution(x1,x2,u,I,p1,p2):
     print(f'x1 = {x1:.4f}')
     print(f'x2 = {x2:.4f}')
     print(f'u  = {u:.4f}')
-    print(f'I-p1*x1-p2*x2 = {I-p1*x1-p2*x2:.8f}') 
+    print(f'I-p1*x1-p2*x2 = {I-p1*x1-p2*x2:.8f}')
+    print(f'x1*p1/I = {x1*p1/I:.4f}')
 
 
 def find_best_choice_monotone(alpha,I,p1,p2,N,do_print=True):
