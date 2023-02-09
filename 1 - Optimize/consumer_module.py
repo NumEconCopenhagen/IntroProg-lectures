@@ -1,5 +1,6 @@
 import numpy as np
 from scipy import optimize
+import matplotlib.pyplot as plt
 
 class consumer:
     
@@ -134,3 +135,13 @@ class consumer:
 
         ax.grid(ls='--',lw=1)
         ax.legend(loc='upper right')
+
+
+    def plot_everything(self):
+        fig = plt.figure(figsize=(5,5))
+        ax = fig.add_subplot(1,1,1)
+
+        self.plot_indifference_curves(ax)
+        self.plot_budgetset(ax)
+        self.plot_solution(ax)
+        self.plot_details(ax)
