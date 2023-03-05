@@ -96,7 +96,7 @@ def find_optimal_labor_supply(nu,frisch,m,w,tau0,tau1,kappa):
         
     Returns:
     
-        (float): utility
+        (float): optimal labor supply
         
     """
     
