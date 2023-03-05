@@ -25,6 +25,12 @@ Classroom: https://classroom.github.com/a/R_4UuvGk
     DataCamp: (not shared here)
 
 2. Inaugural project + Git + second physical lecture
+
+    Form: https://forms.gle/fFmasbkmfWzY8brw9
+    Questions
+    Group formation (https://sites.google.com/view/numeconcph-introprog/guides/git)
+    Live coding
+
 3. Peerfeedback on inaugural project (send excel document)
 4. Data project
 5. Model project
@@ -44,7 +50,8 @@ Recording: CAMTASIA 8.6 (requires license key)
        Zoom: 1 on laptop, 3 on screen
 
     3. Webcam in lower right above status bar
-    4. Produce and Share -> MP4 only (up to 1080p)
+    4. Save as project
+    5. Tools – Sharing -> Batch -> MP4 only (up to 1080p)
        
 Uploading:
 

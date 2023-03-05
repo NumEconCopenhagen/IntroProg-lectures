@@ -1,0 +1,751 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\date{}
+\usepackage{geometry}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.7cm
+\topmargin 1cm
+\rightmargin 2cm
+\bottommargin 2.7cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\shape smallcaps
+\size largest
+Project 0: Inaugural Project
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-3mm}
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\series bold
+Vision: 
+\series default
+The inaugural project teaches you to solve a simple economic model and present
+ the results.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Objectives:
+\series default
+ In your inaugural project, you should show that you can:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Apply simple numerical solution and simulation methods
+\end_layout
+
+\begin_layout Enumerate
+Structure a code project
+\end_layout
+
+\begin_layout Enumerate
+Document code
+\end_layout
+
+\begin_layout Enumerate
+Present results in text form and in figures
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Content:
+\series default
+ In your inaugural project, you should:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Solve and simulate a pre-specified economic model (see next page)
+\end_layout
+
+\begin_layout Enumerate
+Visualize results
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example of structure: 
+\series default
+
+\begin_inset CommandInset href
+LatexCommand href
+name "See this repository"
+target "https://github.com/NumEconCopenhagen/IntroProg-example"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Structure: 
+\series default
+Your inaugural  project should consist of:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A README.md with a short introduction to your project
+\end_layout
+
+\begin_layout Enumerate
+A single self-contained notebook (.ipynb) presenting the analysis
+\end_layout
+
+\begin_layout Enumerate
+Fully documented Python files (.py)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Hand-in: 
+\series default
+On GitHub by uploading it to the subfolder 
+\emph on
+inaugralproject
+\emph default
+, which is located in:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+github.com/NumEconCopenhagen/projects-YEAR-YOURGROUPNAME
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Deadline:
+\series default
+ See 
+\begin_inset CommandInset href
+LatexCommand href
+name "Calendar"
+target "https://sites.google.com/view/numeconcph-introprog/calendar"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Peer feedback: 
+\series default
+After handing in, you will be asked to give peer feedback on the projects
+ of two other groups.
+\begin_inset Newline newline
+\end_inset
+
+The solution will be made available after the peer feedback round has ended.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Exam: 
+\series default
+Your inaugural project will be a part of your exam portfolio.
+\begin_inset Newline newline
+\end_inset
+
+You can incorporate feedback before handing in the final version.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newgeometry{left=3cm,right=3cm,top=2.5cm,bottom=2.5cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Time Use of Couples
+\end_layout
+
+\begin_layout Standard
+We consider a household with a 
+\emph on
+male 
+\emph default
+and a 
+\emph on
+female 
+\emph default
+member.
+ They jointly maximize utility by choosing their time use:
+\end_layout
+
+\begin_layout Enumerate
+Hours working 
+\emph on
+in the market
+\emph default
+, 
+\begin_inset Formula $L_{M}$
+\end_inset
+
+ and 
+\begin_inset Formula $L_{F}$
+\end_inset
+
+, at wages 
+\begin_inset Formula $w_{M}$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Hours working 
+\emph on
+at home
+\emph default
+, 
+\begin_inset Formula $H_{M}$
+\end_inset
+
+ and 
+\begin_inset Formula $H_{F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Their choice of time use implies:
+\end_layout
+
+\begin_layout Enumerate
+Consumption of market goods, 
+\begin_inset Formula $C=w_{M}L_{M}+w_{F}L_{F}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Consumption of home production,
+\begin_inset Formula 
+\[
+H=\begin{cases}
+\min\{H_{M},H_{F}\} & \text{if }\sigma=0\\
+H_{M}^{1-\alpha}H_{F}^{\alpha} & \text{if }\sigma=1\\
+\left((1-\alpha)H_{M}^{\frac{\sigma-1}{\sigma}}+\alpha H_{F}^{\frac{\sigma-1}{\sigma}}\right)^{\frac{\sigma}{\sigma-1}} & \text{else}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+where 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ is the elasticity of substitution, and 
+\begin_inset Formula $\frac{\alpha}{1-\alpha}$
+\end_inset
+
+ is the productivity in home production for females relative to males.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Total consumption, 
+\begin_inset Formula $Q=C^{\omega}H^{1-\omega}$
+\end_inset
+
+, where 
+\begin_inset Formula $\omega$
+\end_inset
+
+ is the weight on market goods.
+\end_layout
+
+\begin_layout Standard
+The household gets disutility from time spend working.
+ The full maximization problem of the household is
+\begin_inset Formula 
+\begin{align*}
+\max_{L_{M},H_{M},L_{F},H_{F}} & \frac{Q^{1-\rho}}{1-\rho}-\nu\left(\frac{T_{M}^{1+\frac{1}{\epsilon}}}{1+\frac{1}{\epsilon}}+\frac{T_{F}^{1+\frac{1}{\epsilon}}}{1+\frac{1}{\epsilon}}\right),\,\rho>1,\nu>0,\epsilon>0\\
+\text{s.t.}\\
+C & =w_{M}L_{M}+w_{F}L_{F}\\
+H & =\begin{cases}
+\min\{H_{M},H_{F}\} & \text{if }\sigma=0\\
+H_{M}^{1-\alpha}H_{F}^{\alpha} & \text{if }\sigma=1\\
+\left((1-\alpha)H_{M}^{\frac{\sigma-1}{\sigma}}+\alpha H_{F}^{\frac{\sigma-1}{\sigma}}\right)^{\frac{\sigma}{\sigma-1}} & \text{else}
+\end{cases}\\
+Q & =C^{\omega}H^{1-\omega}\\
+T_{M} & =L_{M}+H_{M}\\
+T_{F} & =L_{F}+H_{F}\\
+L_{M},H_{M},L_{F},H_{F} & \geq0\\
+T_{M},T_{F} & \leq24
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The baseline parameters are:
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Preferences:
+\series default
+ 
+\begin_inset Formula $\rho=2$
+\end_inset
+
+, 
+\begin_inset Formula $\nu=0.001$
+\end_inset
+
+, 
+\begin_inset Formula $\epsilon=1$
+\end_inset
+
+, 
+\begin_inset Formula $\omega=0.5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Household production:
+\series default
+ 
+\begin_inset Formula $\alpha=0.5$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Wages: 
+\series default
+
+\begin_inset Formula $w_{M}=w_{F}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Questions
+\end_layout
+
+\begin_layout Standard
+We first assume that the choice set is 
+\emph on
+discrete
+\emph default
+ in half hours, specifically
+\begin_inset Formula 
+\begin{align*}
+L_{M},L_{F},H_{M},H_{F} & \in\left[\frac{0\cdot24}{48},\frac{1\cdot24}{48},\frac{2\cdot24}{48},\dots,\frac{48\cdot24}{48}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Code is provided in 
+\emph on
+IntroProg-lectures/projects/HouseholdSpecializationModel.py
+\emph default
+ for solving the model in this case when 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[1.]
+\end_layout
+
+\end_inset
+
+Illustrate how 
+\begin_inset Formula $\frac{H_{F}}{H_{M}}$
+\end_inset
+
+ changes when varying 
+\begin_inset Formula $\alpha\in\{0.25,0.50,0.75\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma=\{0.5,1.0,1.5\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[2.]
+\end_layout
+
+\end_inset
+
+Plot 
+\begin_inset Formula $\log\frac{H_{F}}{H_{M}}$
+\end_inset
+
+ against 
+\begin_inset Formula $\log\frac{w_{F}}{w_{M}}$
+\end_inset
+
+ for 
+\begin_inset Formula $w_{F}\in[0.8,0.9,1.0,1.1,1.2]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We now assume that the choice set is 
+\emph on
+continuous
+\emph default
+, i.e.
+\begin_inset Formula 
+\[
+L_{M},L_{F},H_{M},H_{F}\in\left[0,24\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[3.]
+\end_layout
+
+\end_inset
+
+Plot 
+\begin_inset Formula $\log\frac{H_{F}}{H_{M}}$
+\end_inset
+
+ against 
+\begin_inset Formula $\log\frac{w_{F}}{w_{M}}$
+\end_inset
+
+ for 
+\begin_inset Formula $w_{F}\in[0.8,0.9,1.0,1.1,1.2]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset href
+LatexCommand href
+name "Siminski and Yetsenga (2022)"
+target "https://drive.google.com/file/d/1neoRn4vScoHAIVAzPAdraqyf-RhuEkP7/"
+literal "false"
+
+\end_inset
+
+, 
+\emph on
+Specialization, Comparative Advantage, and the Sexual Division of Labor
+\emph default
+, the following regression is run on time use data of couples,
+\begin_inset Formula 
+\[
+\log\frac{H_{F}}{H_{M}}=\beta_{0}+\beta_{1}\log\frac{w_{F}}{w_{M}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They find that 
+\begin_inset Formula $\beta_{0}\approx0.4$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{1}\approx-0.1$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\hat{\beta}_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+ denote the same coefficients when estimated on data from the model for
+ fixed 
+\begin_inset Formula $w_{M}$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{F}\in[0.8,0.9,1.0,1.1,1.2]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[4.]
+\end_layout
+
+\end_inset
+
+Choose 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ such it minimizes 
+\begin_inset Formula $\left(\beta_{0}-\hat{\beta}_{0}\right)^{2}+\left(\beta_{1}-\hat{\beta}_{1}\right)^{2}$
+\end_inset
+
+.
+ Illustrate how the model fit the data and discuss the economic interpretation
+ of the results.
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+Note: This might take be time consuming.
+ Try to use a narrow interval for 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Assume that additional empirical evidence shows that men and women are equally
+ productive in home production, i.e.
+ 
+\begin_inset Formula $\alpha=0.5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[5.]
+\end_layout
+
+\end_inset
+
+Suggest and implement an extension of the model, and analyze whether or
+ not it can help match the data when 
+\begin_inset Formula $\alpha=0.5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+restoregeometry
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
