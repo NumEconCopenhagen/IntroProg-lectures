@@ -236,7 +236,6 @@ literal "false"
 .
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 
 \series bold
@@ -244,13 +243,8 @@ Peer feedback:
 \series default
 After handing in, you will be asked to give peer feedback on the projects
  of two other groups.
-\begin_inset Newline newline
-\end_inset
-
-The solution will be made available after the peer feedback round has ended.
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
 
 \series bold
