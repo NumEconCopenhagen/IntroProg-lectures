@@ -91,7 +91,7 @@
 
 \shape smallcaps
 \size largest
-Peer Feedback
+Peer Feedback Guide
 \end_layout
 
 \begin_layout Standard
@@ -119,38 +119,65 @@ The projects you hand-in should be understandable to your fellow students,
  and you should be able to understand other students' projects.
  You are therefore required to provide peer feedback on the projects of
  two other groups.
- 
+ Realize that
 \series bold
-Realize that 
+ 
 \series default
 the real benefit of this exercise is not that you get some feedback from
  others.
  The real benefit is that you learn a lot from investigating how others
  have attacked a task similar to yours.
-\begin_inset Newline newline
-\end_inset
+\end_layout
 
+\begin_layout Standard
 You must provide the feedback directly on GitHub using the Issues function.
 \end_layout
 
 \begin_layout Standard
-The feedback should focus on:
+The feedback should focus on: Is it straightforward to run the code? Is
+ it easy to understand what the code is doing? Are the results clearly explained
+? The issues should follow the template below and all comments should be
+ as constructive as possible:
 \end_layout
 
 \begin_layout Enumerate
-Is it straightforward to run the code?
+
+\series bold
+The most elegant solution in the project was: 
+\series default
+(explain what and why)
 \end_layout
 
 \begin_layout Enumerate
-Is it easy to understand what the code is doing?
+
+\series bold
+The hardest section of code in the project to understand was:
+\series default
+ (explain what)
 \end_layout
 
 \begin_layout Enumerate
-Are the results clearly explained?
+
+\series bold
+This part of the project could be better documented: 
+\series default
+(explain what)
 \end_layout
 
 \begin_layout Enumerate
-Do you have some ideas for improvements or extensions?
+
+\series bold
+An idea for an improvement/clarification could be:
+\series default
+ (explain what and why)
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+An idea for an extension could be: 
+\series default
+(explain what and why)
 \end_layout
 
 \begin_layout Standard
@@ -160,36 +187,33 @@ Specific guidelines:
 \end_layout
 
 \begin_layout Enumerate
-Find the 2 groups for whom you need to provide peer feedback.
- You can find a spreadsheet with the groups you need to provide feedback
- to on the Absalon site under the module 
-\begin_inset Quotes eld
-\end_inset
-
-Peer feedback
-\begin_inset Quotes erd
-\end_inset
-
-, there is one separate spreadsheet for the Inaugural project and one for
- the Data project.
- 
-\begin_inset Newline newline
-\end_inset
-
-These sheets are produced by 
-\family typewriter
-PeerFeedbackAssignments.ipynb
-\family default
- which is located in projects folder of 
-\emph on
-IntroProg-lecture
-\emph default
-.
- Each team has a peer_group_1 and peer_group_2 to which they must give feedback.
- The assignment of peers to teams is randomized and you will get independent
- draws for the data project and the model project.
+The assignment of peers to teams is randomized, and will different for the
+ inaugural, data and model project.
 \end_layout
 
+\begin_layout Enumerate
+Find the two groups for whom you need to provide peer feedback here: 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+url{https://docs.google.com/spreadsheets/d/1XLagmDbHoMjsRQO-mw0Pf9O2JSmvJKrQ6IbeOr
+JTh5k/edit?usp=sharing}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Go to their repositories:
 \begin_inset Newline newline
@@ -251,87 +275,7 @@ Issues
 \begin_inset Quotes erd
 \end_inset
 
- tab) where you provide feedback.
- You can see an example here: 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-url{https://github.com/NumEconCopenhagen/IntroProg-example/issues}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The issues should follow the template below and all comments should be as
- constructive as possible:
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-The most elegant solution in the project was: 
-\series default
-(explain what and why)
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-The hardest section of code in the project to understand was:
-\series default
- (explain what)
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-This part of the project could be better documented: 
-\series default
-(explain what)
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-An idea for an improvement/clarification could be:
-\series default
- (explain what and why)
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-An idea for an extension could be: 
-\series default
-(explain what and why)
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Deadlines:
-\end_layout
-
-\begin_layout Enumerate
-Inaugural project feedback: See Absalon.
-\end_layout
-
-\begin_layout Enumerate
-Data project feedback: See Absalon.
+ tab) where you provide the feedback.
 \end_layout
 
 \end_body
