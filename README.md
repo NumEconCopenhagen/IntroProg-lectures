@@ -1,1 +1,1 @@
-[Visit course page](https://sites.google.com/view/numeconcph-introprog/home)
+[Visit course web-page](https://sites.google.com/view/numeconcph-introprog/home)
