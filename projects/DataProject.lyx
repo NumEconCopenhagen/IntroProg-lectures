@@ -121,7 +121,7 @@ Programming is more than writing code.
  up to you, what you will like to do with your project.
  Remember to write your code in a manner that is apt for others to run and
  read when providing feedback.
- I hope to see some creative ideas!
+ We hope to see some creative ideas!
 \end_layout
 
 \begin_layout Itemize
@@ -163,6 +163,7 @@ Content:
  For example the subject of your BA thesis (if you are that far), something
  related to your student job, or perhaps what you would like write about
  in your next thesis or seminar paper.
+ It can also just be some data you find interesting.
  The important thing here is the quality of the code and the presentation
  of results, not whether you acquire new economic knowledge.
  In your data analysis project, you should at a minimum:
@@ -235,8 +236,8 @@ Fully documented Python module files (.py).
 \begin_layout Enumerate
 Data.
  If you do not access data through an API call in your Python scripts, then
- you must store it in a .csv file that is uploaded to your repository along
- code files.
+ you must store it in a .csv file that is uploaded to your repository with
+ the code files.
  Note that Github won't allow you to upload very large data sets (ie.
  multiple GBs).
 \end_layout
@@ -254,6 +255,8 @@ Quality before quantity
  Cleaning and joining a couple of data sets and then making some interactive
  figures might be just fine.
  Else you will be asked to extend it for the exam.
+ Handing in something that is good but a bit short, is much better than
+ handing in a bunch of random graphs.
 \end_layout
 
 \begin_layout Itemize
@@ -294,7 +297,6 @@ Peer feedback:
 \series default
 After handing in, you will be asked to give peer feedback on the projects
  of two other groups.
- We will go over this in the lectures.
 \end_layout
 
 \begin_layout Itemize
@@ -313,7 +315,8 @@ You can incorporate feedback before handing in the final version.
 \begin_inset Formula $\mathbf{Note:}$
 \end_inset
 
- You can find a few suggestions for APIs to use in the notebook for L08.
+ You can find a few suggestions for APIs to use in the notebook about fetching
+ data.
  You are very welcome to find data elsewhere!
 \end_layout
 
