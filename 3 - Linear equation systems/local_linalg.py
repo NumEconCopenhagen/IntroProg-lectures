@@ -47,8 +47,8 @@ def gauss_jordan(A,no_reduction=False):
             c = A[j,i]
             A[j,:] -= c*A[i,:]
 
-def gauss_seidel_split(A):
-    """ split A matrix in additive lower and upper triangular matrices
+def lu_decomposition(A):
+    """ compute LU decomposition
 
     Args:
 
@@ -57,13 +57,30 @@ def gauss_seidel_split(A):
     Returns:
 
         L (ndarray): lower triangular matrix
-        U (ndarray): upper triangular matrix (zero diagonal)
+        U (ndarray): upper triangular matrix
 
     """
+    
+    n = len(A)
 
-    L = np.tril(A)
-    U = np.triu(A)
-    np.fill_diagonal(U,0)
+    # a. create zero matrices for L and U                                                                                                                                                                                                                 
+    L = np.zeros((n,n))
+    U = np.zeros((n,n))
+
+    # b. set diagonal of L to one
+    np.fill_diagonal(L,1)
+    
+    # c. perform the LU Decomposition                                                                                                                                                                                                                     
+    for j in range(n):          
+
+        for i in range(j+1):
+            c = U[:,j]@L[i,:]
+            U[i][j] = A[i][j] - c
+
+        for i in range(j, n):
+            c = U[:j,j]@L[i,:j]
+            L[i][j] = (A[i][j] - c) / U[j][j]
+
     return L,U
 
 def solve_with_forward_substitution(L,RHS):
@@ -113,6 +130,25 @@ def solve_with_backward_substitution(U,RHS):
         x[i] /= U[i,i]
     
     return x
+
+def gauss_seidel_split(A):
+    """ split A matrix in additive lower and upper triangular matrices
+
+    Args:
+
+        A (ndarray): input matrix
+
+    Returns:
+
+        L (ndarray): lower triangular matrix
+        U (ndarray): upper triangular matrix (zero diagonal)
+
+    """
+
+    L = np.tril(A)
+    U = np.triu(A)
+    np.fill_diagonal(U,0)
+    return L,U
 
 def gauss_seidel(A,b,x0,max_iter=500,tau=10**(-8),do_print=False):
     """ solve matrix equation with Gauss-Seidel
@@ -168,39 +204,3 @@ def gauss_seidel(A,b,x0,max_iter=500,tau=10**(-8),do_print=False):
         i += 1
 
     return x
-
-def lu_decomposition(A):
-    """ compute LU decomposition
-
-    Args:
-
-        A (ndarray): input matrix
-
-    Returns:
-
-        L (ndarray): lower triangular matrix
-        U (ndarray): upper triangular matrix
-
-    """
-    
-    n = len(A)
-
-    # a. create zero matrices for L and U                                                                                                                                                                                                                 
-    L = np.zeros((n,n))
-    U = np.zeros((n,n))
-
-    # b. set diagonal of L to one
-    np.fill_diagonal(L,1)
-    
-    # c. perform the LU Decomposition                                                                                                                                                                                                                     
-    for j in range(n):          
-
-        for i in range(j+1):
-            c = U[:,j]@L[i,:]
-            U[i][j] = A[i][j] - c
-
-        for i in range(j, n):
-            c = U[:j,j]@L[i,:j]
-            L[i][j] = (A[i][j] - c) / U[j][j]
-
-    return L,U
