@@ -29,7 +29,7 @@ class RamseyModelClass():
         par.beta = np.nan # discount factor
 
         # b. firms
-        par.A = np.nan
+        par.Gamma = np.nan
         par.production_function = 'cobb-douglas'
         par.alpha = 0.30 # capital weight
         par.theta = 0.05 # substitution parameter        
@@ -39,7 +39,7 @@ class RamseyModelClass():
         par.K_lag_ini = 1.0
 
         # d. misc
-        par.solver = 'broyden' # solver for the equation syste, 'broyden' or 'scipy'
+        par.solver = 'broyden' # solver for the equation system, 'broyden' or 'scipy'
         par.Tpath = 500 # length of transition path, "truncation horizon"
 
     def allocate(self):
@@ -48,7 +48,7 @@ class RamseyModelClass():
         par = self.par
         path = self.path
 
-        allvarnames = ['A','K','C','rk','w','r','Y','K_lag']
+        allvarnames = ['Gamma','K','C','rk','w','r','Y','K_lag']
         for varname in allvarnames:
             path.__dict__[varname] =  np.nan*np.ones(par.Tpath)
 
@@ -61,10 +61,10 @@ class RamseyModelClass():
         # a. find A
         ss.K = KY_ss
         Y,_,_ = production(par,1.0,ss.K)
-        ss.A = 1/Y
+        ss.Gamma = 1/Y
 
         # b. factor prices
-        ss.Y,ss.rk,ss.w = production(par,ss.A,ss.K)
+        ss.Y,ss.rk,ss.w = production(par,ss.Gamma,ss.K)
         assert np.isclose(ss.Y,1.0)
 
         ss.r = ss.rk-par.delta
@@ -82,7 +82,7 @@ class RamseyModelClass():
             print(f'rk_ss = {ss.rk:.4f}')
             print(f'r_ss = {ss.r:.4f}')
             print(f'w_ss = {ss.w:.4f}')
-            print(f'A = {ss.A:.4f}')
+            print(f'Gamma = {ss.Gamma:.4f}')
             print(f'beta = {par.beta:.4f}')
 
     def evaluate_path_errors(self):
@@ -101,7 +101,7 @@ class RamseyModelClass():
         K_lag = path.K_lag = np.insert(K[:-1],0,par.K_lag_ini)
         
         # c. production and factor prices
-        path.Y,path.rk,path.w = production(par,path.A,K_lag)
+        path.Y,path.rk,path.w = production(par,path.Gamma,K_lag)
         path.r = path.rk-par.delta
         r_plus = np.append(path.r[1:],ss.r)
 
@@ -195,27 +195,27 @@ class RamseyModelClass():
         # d. final evaluation
         eq_sys(x)
             
-def production(par,A,K_lag):
+def production(par,Gamma,K_lag):
     """ production and factor prices """
 
     # a. production and factor prices
     if par.production_function == 'ces':
 
         # a. production
-        Y = A*( par.alpha*K_lag**(-par.theta) + (1-par.alpha)*(1.0)**(-par.theta) )**(-1.0/par.theta)
+        Y = Gamma*( par.alpha*K_lag**(-par.theta) + (1-par.alpha)*(1.0)**(-par.theta) )**(-1.0/par.theta)
 
         # b. factor prices
-        rk = A*par.alpha*K_lag**(-par.theta-1) * (Y/A)**(1.0+par.theta)
-        w = A*(1-par.alpha)*(1.0)**(-par.theta-1) * (Y/A)**(1.0+par.theta)
+        rk = Gamma*par.alpha*K_lag**(-par.theta-1) * (Y/Gamma)**(1.0+par.theta)
+        w = Gamma*(1-par.alpha)*(1.0)**(-par.theta-1) * (Y/Gamma)**(1.0+par.theta)
 
     elif par.production_function == 'cobb-douglas':
 
         # a. production
-        Y = A*K_lag**par.alpha * (1.0)**(1-par.alpha)
+        Y = Gamma*K_lag**par.alpha * (1.0)**(1-par.alpha)
 
         # b. factor prices
-        rk = A*par.alpha * K_lag**(par.alpha-1) * (1.0)**(1-par.alpha)
-        w = A*(1-par.alpha) * K_lag**(par.alpha) * (1.0)**(-par.alpha)
+        rk = Gamma*par.alpha * K_lag**(par.alpha-1) * (1.0)**(1-par.alpha)
+        w = Gamma*(1-par.alpha) * K_lag**(par.alpha) * (1.0)**(-par.alpha)
 
     else:
 
