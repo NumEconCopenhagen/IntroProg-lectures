@@ -1,15 +1,25 @@
+from types import SimpleNamespace
+
 import numpy as np
 from scipy import interpolate
-from scipy import linalg
 from scipy import optimize
 
-class ConsumptionSavingModel:
+class ConsumptionSavingModelClass:
 
-    def __init__(self, par):
-        self.par = par
-        self.sim_m1 = []
-        self.data_m1 = []
-        pass
+    def __init__(self):
+
+        # a. namespaces
+        par = self.par = SimpleNamespace()
+        sol = self.sol = SimpleNamespace()
+        sim = self.sim = SimpleNamespace()
+
+        # b. parameters
+        par.rho = 2.0
+        par.kappa = 0.5
+        par.nu = 10.0
+        par.r = 0.04
+        par.beta = 0.94        
+        par.simN = 1_000
 
     def utility(self,c):
         return c**(1-self.par.rho)/(1-self.par.rho)
@@ -23,17 +33,15 @@ class ConsumptionSavingModel:
     def v1(self,c1,m1,v2_interp):
         
         # a. v2 value, if low income
-        m2_low = (1+self.par.r)*(m1-c1) + 1-self.par.Delta
+        m2_low = (1+self.par.r)*(m1-c1) + 0.5
         v2_low = v2_interp([m2_low])[0]
         
         # b. v2 value, if high income
-        m2_high = (1+self.par.r)*(m1-c1) + 1+self.par.Delta
+        m2_high = (1+self.par.r)*(m1-c1) + 1.5
         v2_high = v2_interp([m2_high])[0]
         
         # c. expected v2 value
-        prob_low = 0.5
-        prob_high = 0.5
-        expected_v2 = prob_low*v2_low + prob_high*v2_high
+        expected_v2 = 0.5*v2_low + 0.5*v2_high
         
         # d. total value
         return self.utility(c1) + self.par.beta*expected_v2
@@ -66,7 +74,7 @@ class ConsumptionSavingModel:
     def solve_period_1(self, v2_interp):
 
          # a. grids
-        m1s = np.linspace(1e-8, 4, 100)
+        m1s = np.linspace(1e-8,4,100)
         v1s = np.empty(100)
         c1s = np.empty(100)
 
@@ -90,40 +98,49 @@ class ConsumptionSavingModel:
         return m1s, v1s, c1s
     
     def solve(self):
+        """ solve the model """
+
+        sol = self.sol
 
         # a. solve period 2
-        m2, v2, c2 = self.solve_period_2()
+        sol.m2, sol.v2, sol.c2 = self.solve_period_2()
 
         # b. construct interpolator
-        v2_interp = interpolate.RegularGridInterpolator([m2], v2,
+        v2_interp = interpolate.RegularGridInterpolator([sol.m2], sol.v2,
                                                         bounds_error=False, fill_value=None)
 
         # b. solve period 1
-        m1, v1, c1 = self.solve_period_1(v2_interp)
+        sol.m1,sol.v1,sol.c1 = self.solve_period_1(v2_interp)
 
-        return m1, c1, m2, c2
+    def draw_random_values(self):
+        """ draw random values for simulation """
+
+        par = self.par
+        sim = self.sim
+
+        sim.m1 = np.fmax(np.random.normal(1,0.1,size=par.simN),0)
+        sim.y2 = np.random.choice([0.5,1.5],p=[0.5,0.5],size=(par.simN))
 
     def simulate(self):
+        """ simulate the model """
 
-        # a. solve the model at current parameters
-        m1, c1, m2, c2 = self.solve()
+        par = self.par
+        sol = self.sol
+        sim = self.sim
 
-        # b. construct interpolaters
-        c1_interp = interpolate.RegularGridInterpolator([m1], c1,
+        # a. construct interpolaters
+        c1_interp = interpolate.RegularGridInterpolator([sol.m1], sol.c1,
                                                         bounds_error=False, fill_value=None)
 
-        c2_interp = interpolate.RegularGridInterpolator([m2], c2,
+        c2_interp = interpolate.RegularGridInterpolator([sol.m2], sol.c2,
                                                         bounds_error=False, fill_value=None)
-    
-        # c. sim period 1 based on draws of initial m and solution
-        sim_c1 = c1_interp(self.sim_m1)
-        sim_a1 = self.sim_m1-sim_c1
 
-        # d. transition to period 2 m based on random draws
-        sim_m2 = (1+self.par.r)*sim_a1 + np.random.choice([0.5, 1.5], p=[0.5, 0.5], size=(sim_a1.shape))
+        # b. sim period 1 based on draws of initial m and solution
+        sim.c1 = c1_interp(sim.m1)
+        sim.a1 = sim.m1-sim.c1
 
-        # e. sim period 2 consumption choice based on model solution and sim_m2
-        sim_c2 = c2_interp(sim_m2)
+        # c. transition to period 2 m based on random draws
+        sim.m2 = (1+par.r)*sim.a1 + sim.y2
 
-        return sim_c1, sim_c2
-
+        # d. sim period 2 consumption choice based on model solution and sim.m2
+        sim.c2 = c2_interp(sim.m2)

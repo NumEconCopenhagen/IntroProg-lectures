@@ -8,7 +8,14 @@
     admin access: yes
 
 3. Use `1. GroupsOnGithub.ipynb` to find all groups and share with TAs
+
+    GoogleSheet: https://docs.google.com/spreadsheets/d/1lmAgUrHjNtfq1CzHDI_sZUkaoN45w6OYsr16ilhumGw/edit#gid=0
+    For GDPR: They will it out locally and send it by e-mail. 
+
 4. Use `2. PeerFeedbackAssignments.ipynb` to find allocate peerfeedback and share with students
+
+    GoogleSheet: https://docs.google.com/spreadsheets/d/1lmAgUrHjNtfq1CzHDI_sZUkaoN45w6OYsr16ilhumGw/edit#gid=0
+
 5. Use `3. RepoVisibility.ipynb` before the exam so repositories are private
 
 # Classroom
@@ -33,12 +40,14 @@ Classroom: https://classroom.github.com/a/R_4UuvGk
 
 3. Peerfeedback on inaugural project (send excel document)
 4. Data project
-5. Model project
-6. Third physical lecture + exam
+5. Midterm evaluation (https://forms.gle/r2fJ2aT924nxW6dQ7)
+6. Model project
+6. Third physical lecture + exam (https://forms.gle/4sw7dYm2kdjQyNn26)
 
 # YouTube
 
 Channel: https://www.youtube.com/@numeconcph
+Absalon: Upload copies to avoid adds.
 
 Recording: CAMTASIA 8.6 (requires license key)
 
@@ -58,6 +67,7 @@ Uploading:
     1. Needs verified account for > 15 min
     2. Description: 
 
-        For "Introduction to Programming and Numerical Analysis" targeting economists. See https://sites.google.com/view/numeconcph-introprog/home
+        For "Introduction to Programming and Numerical Analysis" targeting economists. 
+        See https://sites.google.com/view/numeconcph-introprog/home
 
     3. Playlists: IntroProg-20xx
