@@ -95,7 +95,7 @@ class SalonClass:
 
         # Calculate log(kappa)
         log_kappa[:,0] = sim.epsilon[:,0]
-        for t in range(0,par.T):
+        for t in range(1,par.T):
             log_kappa[:,t] = par.rho*log_kappa[:,t-1] + sim.epsilon[:,t] 
         
         # Calculate kappa
@@ -146,7 +146,7 @@ class SalonClass:
                 sim.profits[:,t] = self.profits(kappa,ell,ell_lag)
                 ell_lag = ell
             
-            sim.h[:] = np.sum(par.R**(np.arange(0,par.T,1))*sim.profits[:,:],axis=1)
+            sim.h[:] = np.sum(par.R**(-np.arange(0,par.T,1))*sim.profits[:,:],axis=1)
 
         sim.H = np.mean(sim.h)
 
