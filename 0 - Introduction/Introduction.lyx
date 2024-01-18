@@ -874,7 +874,7 @@ Numerical analysis in action
 \begin_layout Itemize
 We work with 
 \series bold
-Python 3.9
+Python 3.11
 \end_layout
 
 \begin_layout Itemize
@@ -1042,7 +1042,7 @@ status open
 \series bold
 Lectures: 
 \series default
-3 physical lectures (see 
+5 physical lectures (see 
 \begin_inset CommandInset href
 LatexCommand href
 name "calendar"
@@ -1144,7 +1144,7 @@ status open
 \series bold
 Classes:
 \series default
- Week 6 to 20
+ Week 7 to 20
 \begin_inset ERT
 status open
 
@@ -1391,15 +1391,11 @@ footnotesize
 \end_layout
 
 \begin_layout Enumerate
-DataCamp
+DataCamp + Problem Set 0: Getting started
 \end_layout
 
 \begin_layout Enumerate
-DataCamp
-\end_layout
-
-\begin_layout Enumerate
-DataCamp
+DataCamp + Problem Set 0: Getting started
 \end_layout
 
 \begin_layout Enumerate
