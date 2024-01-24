@@ -303,11 +303,11 @@ We consider an exchange economy with two consumers,
 
 .
  The initial endowments are 
-\begin_inset Formula $\omega_{1}^{A}\in\left[0,1\right]$
+\begin_inset Formula $\omega_{1}^{A}\geq0$
 \end_inset
 
  and 
-\begin_inset Formula $\omega_{2}^{A}\in\left[0,1\right]$
+\begin_inset Formula $\omega_{2}^{A}\geq0$
 \end_inset
 
 .
@@ -355,7 +355,7 @@ u^{A}(x_{1},x_{2}) & =x_{1}^{\alpha}x_{2}^{1-\alpha},\,\,\,\alpha\in(0,1)\\
 x_{1}^{A\star}(\boldsymbol{p},\boldsymbol{\omega}^{A}) & =\alpha\frac{p_{1}\omega_{1}^{A}+p_{2}\omega_{2}^{A}}{p_{1}}\\
 x_{2}^{A\star}(\boldsymbol{p},\boldsymbol{\omega}^{A}) & =(1-\alpha)\frac{p_{1}\omega_{1}^{A}+p_{2}\omega_{2}^{A}}{p_{2}}\\
 u^{B}(x_{1},x_{2}) & =x_{1}^{\beta}x_{2}^{1-\beta},\,\,\,\beta\in(0,1)\\
-x_{1}^{B\star}(\boldsymbol{p},\boldsymbol{\omega}^{B}) & =\beta\frac{p_{1}\omega_{1}^{B}+p_{2}\omega_{2}^{B}}{p_{1}}\\
+x_{1}^{B\star}(\boldsymbol{p},\boldsymbol{\omega}^{B}) & \beta\frac{p_{1}\omega_{1}^{B}+p_{2}\omega_{2}^{B}}{p_{1}}\\
 x_{2}^{B\star}(\boldsymbol{p},\boldsymbol{\omega}^{B}) & =(1-\beta)\frac{p_{1}\omega_{1}^{B}+p_{2}\omega_{2}^{B}}{p_{2}}.
 \end{align*}
 
@@ -457,7 +457,16 @@ x_{1}^{A},x_{2}^{A}\in\{0,\frac{1}{N},\frac{2}{N},\dots,1\},N=50
 
 \end_inset
 
+That is, find the pairs of combinations of 
+\begin_inset Formula $x_{1}^{A}$
+\end_inset
 
+ and 
+\begin_inset Formula $x_{2}^{A}$
+\end_inset
+
+ that leave both players as least as well off as they were when consuming
+ their endowments.
 \end_layout
 
 \begin_layout Enumerate
@@ -472,7 +481,7 @@ status open
 \end_inset
 
 For 
-\begin_inset Formula $p_{1}\in\mathcal{P}_{1}=\{0.5,0.5+\frac{1}{N},0.5+\frac{2}{N},\dots,1.5\}$
+\begin_inset Formula $p_{1}\in\mathcal{P}_{1}=\{1.0,1.0+\frac{1}{N},1.0+\frac{2}{N},\dots,2.0\}$
 \end_inset
 
  calculate the error in the market clearing condition s
@@ -498,7 +507,7 @@ status open
 
 \end_inset
 
-What is the market clearing price?
+What is market clearing price?
 \end_layout
 
 \begin_layout Standard
@@ -663,7 +672,7 @@ status open
 
 \begin_layout Plain Layout
 
-[6b.]
+[6a.]
 \end_layout
 
 \end_inset
