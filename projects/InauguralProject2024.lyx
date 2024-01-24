@@ -371,7 +371,7 @@ x_{2}^{A\star}(\boldsymbol{p},\boldsymbol{\omega}^{A})+x_{2}^{B\star}(\boldsymbo
 
 \end_inset
 
-Walras' law only, so if one market clears, the other one does as well.
+Walras' law appliy, so if one market clears, the other one does as well.
 \end_layout
 
 \begin_layout Paragraph*
@@ -451,7 +451,7 @@ Illustrate the following set in the Edgeworth box
 u^{A}(x_{1}^{A},x_{2}^{A})\geq u^{A}(\omega_{1}^{A},\omega_{2}^{A})\\
 u^{B}(x_{1}^{B},x_{2}^{B})\geq u^{B}(\omega_{1}^{B},\omega_{2}^{B})\\
 x_{1}^{B}=1-x_{1}^{A},\,x_{2}^{B}=1-x_{2}^{A}\\
-x_{1}^{A},x_{2}^{A}\in\{0,\frac{1}{N},\frac{2}{N},\dots,1\},N=50
+x_{1}^{A},x_{2}^{A}\in\{0,\frac{1}{N},\frac{2}{N},\dots,1\},N=75
 \end{array}\right\} 
 \]
 
@@ -467,6 +467,7 @@ That is, find the pairs of combinations of
 
  that leave both players as least as well off as they were when consuming
  their endowments.
+ This is thus Pareto improvements relative to the endowment.
 \end_layout
 
 \begin_layout Enumerate
@@ -481,7 +482,7 @@ status open
 \end_inset
 
 For 
-\begin_inset Formula $p_{1}\in\mathcal{P}_{1}=\{1.0,1.0+\frac{1}{N},1.0+\frac{2}{N},\dots,2.0\}$
+\begin_inset Formula $p_{1}\in\mathcal{P}_{1}=\{0.5,0.5+2\frac{1}{N},0.5+2\frac{2}{N},\dots,2.5\}$
 \end_inset
 
  calculate the error in the market clearing condition s
@@ -580,6 +581,11 @@ Assume that
 \end_inset
 
  is not worse of than in the initial endowment.
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ is thus the market maker.
 \end_layout
 
 \begin_layout Enumerate
@@ -678,6 +684,10 @@ status open
 \end_inset
 
 Illustrate and compare with your results in questions 3)-5).
+\begin_inset Newline newline
+\end_inset
+
+Discuss the pros and cons of the various allocations.
 \end_layout
 
 \begin_layout Standard
