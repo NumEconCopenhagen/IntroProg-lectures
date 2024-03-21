@@ -355,7 +355,7 @@ u^{A}(x_{1},x_{2}) & =x_{1}^{\alpha}x_{2}^{1-\alpha},\,\,\,\alpha\in(0,1)\\
 x_{1}^{A\star}(\boldsymbol{p},\boldsymbol{\omega}^{A}) & =\alpha\frac{p_{1}\omega_{1}^{A}+p_{2}\omega_{2}^{A}}{p_{1}}\\
 x_{2}^{A\star}(\boldsymbol{p},\boldsymbol{\omega}^{A}) & =(1-\alpha)\frac{p_{1}\omega_{1}^{A}+p_{2}\omega_{2}^{A}}{p_{2}}\\
 u^{B}(x_{1},x_{2}) & =x_{1}^{\beta}x_{2}^{1-\beta},\,\,\,\beta\in(0,1)\\
-x_{1}^{B\star}(\boldsymbol{p},\boldsymbol{\omega}^{B}) & \beta\frac{p_{1}\omega_{1}^{B}+p_{2}\omega_{2}^{B}}{p_{1}}\\
+x_{1}^{B\star}(\boldsymbol{p},\boldsymbol{\omega}^{B}) & =\beta\frac{p_{1}\omega_{1}^{B}+p_{2}\omega_{2}^{B}}{p_{1}}\\
 x_{2}^{B\star}(\boldsymbol{p},\boldsymbol{\omega}^{B}) & =(1-\beta)\frac{p_{1}\omega_{1}^{B}+p_{2}\omega_{2}^{B}}{p_{2}}.
 \end{align*}
 
@@ -508,7 +508,7 @@ status open
 
 \end_inset
 
-What is market clearing price?
+What is the market clearing price?
 \end_layout
 
 \begin_layout Standard
@@ -732,10 +732,14 @@ status open
 \end_inset
 
 Find the market equilibrium allocation for each 
-\begin_inset Formula $\boldsymbol{\omega}^{A}\in\mathcal{C}$
+\begin_inset Formula $\boldsymbol{\omega}^{A}\in\mathcal{W}$
 \end_inset
 
- and plot them in the Edgeworth box
+ 
+\begin_inset Newline newline
+\end_inset
+
+and plot them in the Edgeworth box
 \end_layout
 
 \begin_layout Standard
