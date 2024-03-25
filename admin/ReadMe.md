@@ -10,11 +10,10 @@
    template: NumEconCopenhagen/IntroProg-example
 3. Use `1. GroupsOnGithub.ipynb` to find all groups and share with TAs
 
-   GoogleSheet: https://docs.google.com/spreadsheets/d/1lmAgUrHjNtfq1CzHDI_sZUkaoN45w6OYsr16ilhumGw/edit#gid=0
-   For GDPR: They will it out locally and send it by e-mail.
+   For GDPR: They will be send out locally and send it by e-mail.
 4. Use `2. PeerFeedbackAssignments.ipynb` to find allocate peerfeedback and share with students
 
-   GoogleSheet: https://docs.google.com/spreadsheets/d/1lmAgUrHjNtfq1CzHDI_sZUkaoN45w6OYsr16ilhumGw/edit#gid=0
+   GoogleSheet: https://docs.google.com/spreadsheets/d/1Bdg7pGXWVCoRVBYZOgzccUMIqmttagraXd52B41Hwko/edit?usp=sharing
 5. Use `3. RepoVisibility.ipynb` before the exam so repositories are private
 
 # Classroom
