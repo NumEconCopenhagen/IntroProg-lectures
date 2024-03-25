@@ -10,7 +10,9 @@
    template: NumEconCopenhagen/IntroProg-example
 3. Use `1. GroupsOnGithub.ipynb` to find all groups and share with TAs
 
-   For GDPR: They will be send out locally and send it by e-mail.
+   Google sheet: https://docs.google.com/spreadsheets/d/1AZYHlwfQSungF-ptTHd1wDq5AgoxFvwVHgAwGQYY12A/edit#gid=0
+
+   For GDPR: The sheet with student IDs will be send out by e-mail.
 4. Use `2. PeerFeedbackAssignments.ipynb` to find allocate peerfeedback and share with students
 
    GoogleSheet: https://docs.google.com/spreadsheets/d/1Bdg7pGXWVCoRVBYZOgzccUMIqmttagraXd52B41Hwko/edit?usp=sharing
