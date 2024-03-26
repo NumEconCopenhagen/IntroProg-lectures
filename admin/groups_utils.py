@@ -1,7 +1,7 @@
 from github import Github # pip install PyGithub
 
 
-def load_repos(print_groups=False):
+def load_repos(print_groups=False,check_year=False):
     # load personal access token
     with open(r"C:\Users\hms467\OneDrive - University of Copenhagen\Documents\Arbejde\Undervisning\IPNA_2024\Github\token.txt", mode = "r") as file:
         token = file.read()
@@ -24,5 +24,14 @@ def load_repos(print_groups=False):
         # see this years' repos
         for r in current_class:
             print(r.removeprefix(class_name+"-"))
+
+
+    if check_year:
+        print(f'\nFollowing repos are not in the class but includes the year {year}:')
+
+        for repo in all_repos:
+            if (year in repo.name) & (class_name not in repo.name):
+                print(repo.name)
+
 
     return class_name, all_repos, current_class, disregard_repos
