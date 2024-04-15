@@ -199,8 +199,11 @@ Limitation:
 \emph on
 sympy
 \emph default
- can only play a small role in your project because the focus must be on
- the 
+ can only play a 
+\bar under
+very small role
+\bar default
+ in your project because the focus must be on the 
 \emph on
 numerical
 \emph default
