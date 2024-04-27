@@ -1,5 +1,3 @@
-### This is a template/example of how to structure the .py-file for a model
-
 
 # Import packages (just the ones you need)
 import numpy as np
@@ -10,11 +8,7 @@ plt.rcParams.update({"axes.grid":True,"grid.color":"black","grid.alpha":"0.25","
 plt.rcParams.update({'font.size': 14})
 
 
-
-
-# Define the model
-class ModelName():
-
+class ExchangeEconomyModel:
     def __init__(self, **kwargs):
         '''
         Initialize the model with default parameters
@@ -35,24 +29,26 @@ class ModelName():
         # Allocate arrays simulation (if needed)
         self.allocate()
 
-        # Draw shocks
+        # Simulate draws
         self.simulate()
 
-
+        
     def setup(self):
         '''
         Set default parameters
         '''
         par = self.par
 
-        # Model parameters
-        par.alpha = 1.
+        # a. parameters
+        par.N = 50
+        par.mu = np.array([3,2,1])
+        par.Sigma = np.array([[0.25, 0, 0], [0, 0.25, 0], [0, 0, 0.25]])
+        par.gamma = 0.8
+        par.zeta = 1
 
-        # Simulation options
-        par.T = 100
+        self.allocate()
 
-
-
+        self.simulate
     def allocate(self):
         '''
         Allocate arrays for simulation
@@ -62,12 +58,15 @@ class ModelName():
         par = self.par
         sim = self.sim
 
-        simvarnames = ['epsilon'] # Which arrays should be available in the simulation namespace
+        simvarnames = ['e1','e2','e3'] # Which arrays should be available in the simulation namespace
 
         for varname in simvarnames:
-            sim.__dict__[varname] =  np.nan*np.ones(par.T) # Allocate the size of the arrays
-        # In this function all arrays have the same size, this is not always the case
+            sim.__dict__[varname] =  np.nan*np.ones(par.N) # Allocate the size of the arrays
+        
 
+        N3_vars = ['alphas','betas']
+        for varname in N3_vars:
+            sim.__dict__[varname] =  np.nan*np.ones((par.N,3)) 
 
     
     def simulate(self,seed=1234):
@@ -82,4 +81,12 @@ class ModelName():
         
         np.random.seed(seed)
 
-        sim.epsilon[:] = np.random.normal(size=par.T)
+        # preferences
+        sim.alphas[:] = np.exp(np.random.multivariate_normal(par.mu, par.Sigma, size=par.N))
+        sim.betas[:] = sim.alphas/np.reshape(np.sum(sim.alphas,axis=1),(par.N,1))
+
+        # endowments
+        sim.e1[:] = np.random.exponential(par.zeta,size=par.N)
+        sim.e2[:] = np.random.exponential(par.zeta,size=par.N)
+        sim.e3[:] = np.random.exponential(par.zeta,size=par.N)
+
