@@ -46,9 +46,12 @@ class ExchangeEconomyModel:
         par.gamma = 0.8
         par.zeta = 1
 
-        self.allocate()
+        par.epsilon = 1e-4
+        par.kappa = 4
+       
 
-        self.simulate
+
+
     def allocate(self):
         '''
         Allocate arrays for simulation
