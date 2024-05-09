@@ -1,0 +1,337 @@
+% for resizing tables: https://tex.stackexchange.com/questions/38177/including-large-tables-in-a-beamer-frame
+
+\documentclass[10pt,english,t,aspectratio=169]{beamer}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[default]{lato} %font
+
+
+
+
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm} % like bold symbol but easier syntax, and says it is more careful 
+%\numberwithin{equation}{section}
+\usepackage{graphicx}
+\usepackage{bbold}
+\usepackage{makecell}
+
+
+\usepackage{comment} % For longer notes
+\ifx\hypersetup\undefined
+  \AtBeginDocument{%
+    \hypersetup{unicode=true}
+  }
+\else
+  \hypersetup{unicode=true}
+\fi
+%\usepackage{breakurl}
+
+\usepackage{tikzsymbols}% Smileys and stuf
+
+\usepackage{booktabs} % Toprule midrule etc. in tables
+\usepackage[flushleft]{threeparttable}
+\usepackage{adjustbox} % Shrink stuff
+%\usepackage{showframe} % Useful for debugging
+\usepackage{dcolumn}  % For aligning decimals in tables
+
+\usepackage{multirow}
+
+\usepackage{pgfpages} % For when also showing notes 
+% These slides also contain speaker notes. You can print just the slides,
+% just the notes, or both, depending on the setting below. Comment out the want
+% you want.
+\setbeameroption{hide notes} % Only slides
+%\setbeameroption{show only notes} % Only notes
+%\setbeameroption{show notes on second screen=right} % Both
+
+\usepackage{xcolor} % Colored math stuff using \mathcolor{blue}{Something}
+\makeatletter
+\def\mathcolor#1#{\@mathcolor{#1}}
+\def\@mathcolor#1#2#3{%
+  \protect\leavevmode
+  \begingroup
+    \color#1{#2}#3%
+  \endgroup
+}
+\makeatother
+
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+% this default might be overridden by plain title style
+\newcommand\makebeamertitle{\frame{\maketitle}}%
+% (ERT) argument for the TOC
+\AtBeginDocument{%
+  \let\origtableofcontents=\tableofcontents
+  \def\tableofcontents{\@ifnextchar[{\origtableofcontents}{\gobbletableofcontents}}
+  \def\gobbletableofcontents#1{\origtableofcontents}
+}
+
+% For references
+\usepackage{natbib}
+\bibliographystyle{econ}
+
+\usepackage{hyperref} %For link- references
+\usepackage{changepage}  % For adjustwidth command
+
+
+
+\usepackage{tikz} % Tikz inspiration by https://github.com/paulgp/beamer-tips/blob/master/slides.tex
+\usetikzlibrary{positioning}
+
+\usepackage{appendixnumberbeamer} % For stopping slidenumbering  using \appendix
+
+
+\usetheme[progressbar=frametitle,block=fill]{metropolis}
+
+% Set transparent overlay when using pause 
+\setbeamercovered{transparent}
+
+% code
+\usepackage{listings} 
+
+% margin
+\setbeamersize{text margin right=0.5cm, text margin left=0.5cm }
+
+% colors
+\colorlet{DarkRed}{red!70!black}
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{alerted text}{fg=DarkRed}
+\setbeamercolor{progress bar}{fg=DarkRed}
+\setbeamercolor{button}{bg=DarkRed}
+
+
+% width of seperators
+\makeatletter
+\setlength{\metropolis@titleseparator@linewidth}{1pt}
+\setlength{\metropolis@progressonsectionpage@linewidth}{1pt}
+\setlength{\metropolis@progressinheadfoot@linewidth}{1pt}
+\makeatother
+
+% new alert block
+\newlength\origleftmargini
+\setlength\origleftmargini\leftmargini
+\setbeamertemplate{itemize/enumerate body begin}{\setlength{\leftmargini}{4mm}}
+\let\oldalertblock\alertblock
+\let\oldendalertblock\endalertblock
+\def\alertblock{\begingroup \setbeamertemplate{itemize/enumerate body begin}{\setlength{\leftmargini}{\origleftmargini}} \oldalertblock}
+\def\endalertblock{\oldendalertblock \endgroup}
+\setbeamertemplate{mini frame}{}
+\setbeamertemplate{mini frame in current section}{}
+\setbeamertemplate{mini frame in current subsection}{}
+\setbeamercolor{section in head/foot}{fg=normal text.bg, bg=structure.fg}
+\setbeamercolor{subsection in head/foot}{fg=normal text.bg, bg=structure.fg}
+
+
+% Removes section slides
+\begin{comment}
+\AtBeginSection[]
+{
+}
+\end{comment}
+
+
+% Alternatively have slides with a table of contents at each new section
+\begin{comment}
+\AtBeginSection[]
+{
+    \begin{frame}[noframenumbering]
+        \frametitle{Table of Contents}
+        \tableofcontents[currentsection]
+    \end{frame}
+}
+\end{comment}
+
+% footer
+\makeatletter
+\setbeamertemplate{footline}{%
+    \begin{beamercolorbox}[colsep=1.5pt]{upper separation line head}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}{section in head/foot}
+      \vskip1pt\insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll \insertframenumber{} / \inserttotalframenumber \hskip2pt}\vskip3pt% 
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[colsep=1.5pt]{lower separation line head}
+    \end{beamercolorbox}
+}
+\makeatother
+
+% toc
+\setbeamertemplate{section in toc}{\hspace*{1em}\inserttocsectionnumber.~\inserttocsection\par}
+\setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsectionnumber.\inserttocsubsectionnumber.~\inserttocsubsection\par}
+
+\makeatother
+\title{Outroduction\vspace{-2mm}}
+\subtitle{Introduction to Programming and Numerical Analysis \vspace{-4mm} } 
+\author{Asker N. Christensen}
+\date{Spring 2024}
+%\today
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{document}
+
+
+
+{
+\setbeamertemplate{footline}{} 
+\begin{frame}
+
+\maketitle
+
+\begin{tikzpicture}[overlay, remember picture]
+\node[below left=0cm and 0cm of current page.north east] 
+{\includegraphics[width=3 cm]{figs/ku_logo.png}};
+\end{tikzpicture}
+\end{frame}
+}
+\addtocounter{framenumber}{-1}
+
+
+\begin{frame}{Table of contents}
+    \tableofcontents[]
+\end{frame}
+
+
+\section{Introduction}
+\begin{frame}{Introduction}
+    \begin{itemize}
+        \item \textbf{We are almost at the end!}
+        \item We hope that you have enjoyed the course, and will use programming in your further economics education/work.
+        \item \textbf{\href{https://github.com/NumEconCopenhagen/IntroProg-lectures/blob/main/projects/ExamProject.pdf}{The final exam}} is a portfolio exam 
+        \begin{enumerate}[-]
+            \item The 3 projects you have created during the course.
+            \item A new exam assignment, you'll have 48 hours to answer.
+        \end{enumerate}
+        
+    \end{itemize}
+\end{frame}
+
+
+\section{Course overview}
+\begin{frame}{Course overview}
+\begin{itemize}
+    \item \textbf{Fundamentals:} Print, plot, optimize, simulate, structure, document, work-flow.  \par 
+    \item \textbf{Working with data:} Fetch, combine, split-apply-combine, visualize.
+    \item \textbf{Algorithms:} Pseudo code, algorithms, complexity, solve, optimization, symbolic.
+    \item \textbf{Further perspectives:} Comprehensions, generators, vectorization, parallelization, timing, numba.
+\end{itemize}
+    \vfill 
+    While working with the material, you should hopefully also have gained the ability to \textbf{reformulate mathematical models into code.} \par 
+    \textbf{All model notebooks} (ASAD, Labor supply, Consumer problem, Production economy,  Random numbers example, OLG, Ramsey) are relevant to revisit.
+\end{frame}
+
+
+
+
+\section{Exam project}
+\begin{frame}{Problems}
+\begin{itemize}
+\item \textbf{Structure:} 3 problems with 3-6 sub-questions. Most problems are on solving and
+simulating models and analyzing their implications graphically and
+numerically. There can also be problems on working with data, and on algorithms. 
+\item \textbf{Examples of a model problems}
+\begin{enumerate}
+\item Solve consumer or firm problems (with non-standard constraints)
+\item Solve and simulate an AS-AD model
+\item Solve for the Walras-equilibrium in an exchange economy
+\item Solve an extended Solow model
+\item Solve a two period dynamic optimization problem
+\end{enumerate}
+\item []$\Rightarrow$ similar to the problems in the problem sets
+\item \textbf{Curriculum: }Lecture notebooks\textbf{ }(except notebooks and sections
+marked with +)
+\item \textbf{Packages: }No new packages are required, and using non-standard
+packages are actively discouraged.
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{Answering}
+\begin{enumerate}
+\item \textbf{Focus on answering the questions} - nothing more, nothing
+less
+\item Explain your \textbf{method in words }(or with an algorithm)
+\item \textbf{Structure and comment your code!}
+\item Explain your \textbf{results in words}
+\item \textbf{Partial answers, attempts and considerations} are also \textbf{awarded
+}(something on everything is better than a lot on a few questions)
+\begin{enumerate}[-]
+    \item If you think there is an error in your code, but you can't/don't have time to fix it, addressing this in words is a \textbf{huge} plus.
+\end{enumerate}
+\end{enumerate}
+\textbf{Disclaimer: }Solving the full exam project in depth will be
+hard. \par 
+\textbf{Use of AI is allowed.} Guide to integrate with VS Code in the bottom of \underline{\href{https://sites.google.com/view/numeconcph-introprog/guides/installation}{this page}.}
+\end{frame}
+%
+\begin{frame}{Hand-in}
+\begin{itemize}
+\item \textbf{You should hand-in a single zip-file named with your groupname
+only.}
+\item The zip-file should contain:
+\begin{enumerate}
+\item A general README.md for your portfolio
+\item Your inaugural project (in the folder /inauguralproject)
+\item Your data analysis project (in the folder /dataproject)
+\item Your model analysis project (in the folder /modelproject)
+\item Your exam project (in the folder /examproject)
+\end{enumerate}
+\end{itemize}
+\end{frame}
+%
+
+
+
+
+
+
+
+\section{Wrap up}
+\begin{frame}{To-do before the exam}
+    \begin{enumerate}
+        \item[(0.)] Please answer the course evaluation you have gotten over mail.
+        \item Model project \textbf{peer feedback} before \textbf{May 19}.
+        \item \textbf{Polish up} your 3 projects so they are ready for the exam. 
+        \item \textbf{Exam problems preparation.} \par
+        Many ways to do that:
+        \begin{itemize}
+            \item Look at earlier exams to get a sense of the kind of questions you'll get
+            \item Get an overview of the contents of the lecture and exercise notebooks. $\rightarrow$ Fill knowledge gaps.
+            \item Go through the lectures that cover solving economic models \par 
+            (ASAD, Labor supply, Consumer problem, Production economy,  Random numbers example, OLG, Ramsey). \par 
+            Make sure you understand them, for example by changing them or rewriting the code to solve them yourself.
+            \item Resolve the exercises.
+            \item Try to solve earlier exams.
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+
+
+
+\begin{frame}{Questions}
+\begin{itemize}
+\item \textbf{Any questions now?}
+\item \textbf{Online: }\href{https://github.com/NumEconCopenhagen/IntroProg-lectures/issues}{https://github.com/NumEconCopenhagen/IntroProg-lectures/issues}
+\end{itemize}
+
+\vfill
+\textbf{Amped for more programming?} KU offers more programming courses: \underline{\href{https://sites.google.com/view/numeconcph/home}{https://sites.google.com/view/numeconcph/home}}
+\end{frame}
+%
+
+
+\section{2023 exam examples}
+
+
+
+
+
+\end{document}
