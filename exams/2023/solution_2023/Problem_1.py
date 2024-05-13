@@ -212,8 +212,14 @@ class GovClass:
             
         res = optimize.minimize_scalar(objective,bounds=(0.01,0.99),method='bounded')
         sol.tau_opt  = res.x
-        sol.sv_opt,sol.L_opt,sol.G_opt = self.social_value(sol.tau_opt)
-        
+
+        if type == 'cb':
+            sol.sv_opt,sol.L_opt,sol.G_opt = self.social_value(sol.tau_opt)
+        elif type == 'ces':
+            self.find_G(sol.tau_opt,plotit=False)
+            sol.sv_opt = -res.fun
+            
+
         print(f'tau_opt = {sol.tau_opt:.2f}')
         print(f'social value = {sol.sv_opt:.2f}')
         print(f'L_opt = {sol.L_opt:.2f}')
