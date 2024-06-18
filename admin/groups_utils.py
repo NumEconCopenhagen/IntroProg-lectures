@@ -17,8 +17,9 @@ def load_repos(print_groups=False,check_year=False):
 
     # b. locate all repositories in current class
     disregard_repos = ['lucas-og-anna']
+    add_repos = ['Projects_2024_Emma-Anna-Oscar']
 
-    current_class = [repo.name for repo in all_repos if (class_name in repo.name) & (repo.name not in disregard_repos)]
+    current_class = [repo.name for repo in all_repos if ( (class_name in repo.name) & (repo.name not in disregard_repos) ) or (repo.name in add_repos)]
 
     if print_groups:
         # see this years' repos
@@ -30,7 +31,7 @@ def load_repos(print_groups=False,check_year=False):
         print(f'\nFollowing repos are not in the class but includes the year {year}:')
 
         for repo in all_repos:
-            if (year in repo.name) & (class_name not in repo.name):
+            if (year in repo.name) & (repo.name not in current_class):
                 print(repo.name)
 
 

@@ -1,6 +1,8 @@
 # Prepare
 
 1. Ensure you are _owner_ of https://github.com/NumEconCopenhagen (can be changed under `People`)
+
+   - Generate personal access token: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
 2. Create assignment `projects-20xx` on https://classroom.github.com/
    (If you do not have access to a NumEconCopenhagen classroom upon pressing the link, you can create a new one, from which the assignment can be created)
 
